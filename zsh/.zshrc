@@ -135,7 +135,6 @@ glatexrun() {
 
 update() {
   pushd $HOME &> /dev/null
-  vcsh rcfiles pull
   mr up
   popd &> /dev/null
 }
