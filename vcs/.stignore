@@ -1,0 +1,43 @@
+*.sparsebundle
+.*
+*~
+.*~
+*.log
+*.tmp
+*.bak
+.DS_Store
+.localized
+.GlobalPreferences.plist
+.info
+iChat Icons
+random_seed
+sentinel
+org/.*
+.#*
+$RECYCLE.BIN
+#.*#
+desktop.ini
+Documents/Outlook Temp
+Public
+Sites
+tmp
+Repos
+Documents/Microsoft User Data
+Documents/Virtual Machines*
+Documents/ViberDownloads
+vmware
+Applications
+bin
+Library
+VirtualBox VMs
+Templates
+Videos
+Music
+Scratch
+Pictures
+Repos
+Dropbox*
+Sort
+Zotero
+Google Drive File Stream
+Documents/settings

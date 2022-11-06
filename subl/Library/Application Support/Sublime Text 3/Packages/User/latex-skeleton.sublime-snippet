@@ -1,0 +1,36 @@
+<snippet>
+    <content><![CDATA[
+%%% filename : $TM_FILENAME
+%%% author   : $TM_FULLNAME
+
+\documentclass[11pt,pdftex]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage[pdftex,colorlinks=true,citecolor=black,filecolor=black,%
+            linkcolor=black,urlcolor=black]{hyperref}
+\usepackage{todonotes}
+%\usepackage{times}
+%\usepackage{listings}
+%\usepackage{fancyvrb}
+%\usepackage{amsmath}
+%\usepackage{amsthm}
+
+\title{Title}
+\author{Author}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+
+
+\end{document}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>skel</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>text.tex.latex</scope>
+</snippet>

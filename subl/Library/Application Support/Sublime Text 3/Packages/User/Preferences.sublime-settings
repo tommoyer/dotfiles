@@ -1,0 +1,30 @@
+{
+	"added_words":
+	[
+		"cyber",
+		"internet"
+	],
+	"auto_complete_triggers":
+	[
+		{
+			"characters": "<",
+			"selector": "text.html",
+		},
+		{
+			"characters": "\\",
+			"selector": "text.tex.latex",
+		}
+	],
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"dictionary": "Packages/Language - English/en_US.dic",
+	"font_size": 11,
+	"gutter": true,
+	"ignored_packages":
+	[
+		"Markdown",
+	],
+	"line_numbers": true,
+	"tab_size": 4,
+	"theme": "Adaptive.sublime-theme",
+	"translate_tabs_to_spaces": true,
+}

@@ -1,0 +1,4 @@
+vagrant-cachier
+vagrant-pristine
+vagrant-vmware-desktop
+vagrant-mutate

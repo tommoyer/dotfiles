@@ -1,0 +1,12 @@
+[
+    { "keys": ["super+ctrl+e"], "command": "exec", "args": { "hide_phantoms_only": true }, },
+    { "keys": ["ctrl+h"], "command": "move", "args": { "by": "characters", "forward": false } },
+    { "keys": ["ctrl+j"], "command": "move", "args": { "by": "lines", "forward": true } },
+    { "keys": ["ctrl+k"], "command": "move", "args": { "by": "lines", "forward": false } },
+    { "keys": ["ctrl+l"], "command": "move", "args": { "by": "characters", "forward": true } },
+    { "keys": ["ctrl+super+h"], "command": "move", "args": { "by": "characters", "forward": false, "extend": true } },
+    { "keys": ["ctrl+super+j"], "command": "move", "args": { "by": "lines", "forward": true, "extend": true } },
+    { "keys": ["ctrl+super+k"], "command": "move", "args": { "by": "lines", "forward": false, "extend": true } },
+    { "keys": ["ctrl+super+l"], "command": "move", "args": { "by": "characters", "forward": true, "extend": true } },
+    
+]

@@ -1,0 +1,24 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"Djaneiro",
+		"Emmet",
+		"FileBrowser",
+		"GitGutter",
+		"GitSavvy",
+		"Hooks",
+		"LaTeXSmartQuotes",
+		"LaTeXTools",
+		"MarkdownEditing",
+		"MarkdownPreview",
+		"Package Control",
+		"SideBarEnhancements",
+		"SmartMarkdown",
+		"WordCount"
+	],
+}

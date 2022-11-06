@@ -1,0 +1,7 @@
+#!/bin/bash
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install ack bat diff-so-fancy gnuplot graphviz htop mr pandoc pandoc-citeproc ssh-copy-id the_silver_searcher tig tmux vcsh zenity zsh-syntax-highlighting
+
+brew tap caskroom/cask
+brew cask install mactex alfred google-backup-and-sync google-drive-file-stream firefox franz hammerspoon iterm2 moneydance obs omniplan omnifocus signal skim skype spotify sublime-text homebrew/cask-versions/vitamin-r3 vmware-fusion duet 

@@ -1,0 +1,99 @@
+* Introduction
+This is my notes on how I configure a new machine. This has been tested on Mac OS X 10.9, but should be generally applicable.
+* Homebrew (Mac OS X Only)
+Homebrew provides packages that are needed to setup everything else.
+** Lincoln-specific notes
+Homebrew's install script needs modified slightly, since it uses curl to download the initial files. The curl flags (fsSL), need to include the proxy command as well (-x http://llproxy:8080). Additionally, git needs configured to use a proxy the proxy as well.
+#+BEGIN_SRC sh
+sudo git config --system http.proxy http://llproxy:8080
+#+END_SRC
+** Required packages
+Before the packages from homebrew can be installed, XQuartz must be installed as a dependency.
+
+Once homebrew and XQuartz installed, the following commands will install all of the required packages.
+#+BEGIN_SRC sh
+brew tap railwaycat/emacsmacport
+brew install aspell emacs-mac hevea mr ssh-copy-id tig tmux vcsh z fzf git-latexdiff --with-lang-en --with-modern-icon
+#+END_SRC
+* Dotfiles
+** Once the homebrew packages are installed, the configuration files can be downloaded. Start by cloning the 'mr' repository that contains the configuration for the rest of the repositories.
+#+BEGIN_SRC sh
+vcsh clone https://tmoyer@bitbucket.org/tmoyer/rcfiles.git
+mkdir ~/.config/mr/config.d/
+#+END_SRC
+Once the repository is cloned, symlinks need created from ~/.config/mr/available.d to ~/.config/mr/config.d for all of the repositories that are needed for a specific machine. The format of the command to symlink (from ~/.config/mr/config.d) is ln -s ../available.d/<file>, where file is one of the files in ~/.config/mr/available.d/.
+
+Once that is done, the mr utility can download the rest of the configuration files.
+#+BEGIN_SRC sh
+mr up
+#+END_SRC
+
+For ZSH configuraiton, certain files need symlinked. The following snippet needs to be run from zsh:
+#+BEGIN_SRC sh
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -sf "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+#+END_SRC
+** Lincoln notes
+There is a separate repository for Lincoln-specific configuration files
+#+BEGIN_SRC sh
+vcsh clone git@llcad-github.llan.ll.mit.edu:tmoyer/lincoln.git
+ln -sf ~/.config/mr/available.d/lincoln.mr ~/.config/mr/config.d/lincoln.mr
+mr up
+#+END_SRC
+* Mac OS X Packages
+The following additional packages were installed.
+- Google Chrome
+- MultiBrowser
+- OmniGraffle
+- OmniPlan
+- pwSafe (AppStore)
+- Radiant Player
+- MacTeX
+- Sublime Text 3
+- Slate
+- Vagrant
+- Vagrant VMware Plugin
+- Menubar Countdown
+* Linux Packages
+Run the following command to install the necessary packages. There is an external repository that needs added to get nuvolaplayer3 installed.
+#+BEGIN_SRC
+sudo apt-get install apt-file aspell aspell-en build-essential ddclient default-jre default-jre-headless deja-dup dselect duplicity emacs24 emacs24-el gnome-do gnome-do-plugins handbrake jabref lsb mdadm mr myrepos nuvolaplayer3 openssh-server shotwell terminator tig tmux ubuntu-restricted-extras unison unison-all unison-all-gtk unison-gtk unison2.32.52 unison2.32.52-gtk vcsh zsh gnome-tweak-tool 
+#+END_SRC
+
+Here is a list of the additional packages that are installed, but must be downloaded and manually installed:
+- dropbox
+- epson-inkjet-printer-201212w
+- google-chrome-stable
+- iscan
+- iscan-data
+- iscan-network-nt
+- moneydance
+- plexmediaserver
+- virtualbox-5.0
+- makemkv
+* Emacs packages
+Once Emacs is installed, run the following commands
+#+BEGIN_SRC
+M-x package-list-packages
+#+END_SRC
+Find the following packages and install them
+- auctex
+- auctex-latexmk
+- org
+- helm
+- yasnippet
+- htmlize
+
+After the packages are installed, run the following command
+#+BEGIN_SRC
+find ~/.emacs.d/elpa -name "*.elc" -delete
+#+END_SRC
+* Repositories with "upstreams"
+Several repositories have upstreams that I merge from:
+- zprezto
+- org-html-themes
+
+# To install Oh-My-Zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
