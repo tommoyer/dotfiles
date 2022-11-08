@@ -44,7 +44,7 @@ sudo add-apt-repository -y ppa:yubico/stable
 sudo apt update
 
 # Install apt packages
-sudo apt install -y albert bat build-essential fprintd gnuplot graphviz htop input-remapper myrepos ncdu podman python3-pip silversearcher-ag sshuttle sublime-text texlive-full tig tmux vcsh vim virt-manager virt-viewer virtinst yubikey-manager yubikey-personalization-gui zsh zsh-autosuggestions zsh-syntax-highlighting gnome-keyring flatpak
+sudo apt install -y albert bat build-essential flatpak fprintd gir1.2-gda-5.0 gir1.2-gsound-1.0 gir1.2-gtop-2.0 gnome-keyring gnome-shell-extension-manager gnome-tweaks gnuplot graphviz htop input-remapper libaio1 libdebconfclient0 libdevmapper-event1.02.1 libfido2-1 libfuse2 libgtop2-dev login lvm2 mokutil myrepos ncdu pcscd podman python3-pip silversearcher-ag sshuttle stow sublime-text tailscale texlive-full ticktick tig tmux vim virt-manager virt-viewer virtinst wl-clipboard yubikey-manager yubikey-personalization zsh-autosuggestions zsh-syntax-highlighting zsh
 
 # Install snaps
 sudo snap install authy bitwarden icloud-for-linux mattermost-desktop multipass slack spotify telegram-desktop zotero-snap
@@ -81,4 +81,4 @@ echo "To ensure that the Chrome profile options are in the menu: update-desktop-
 echo "Morgen and Mailspring not installed from snap"
 echo "Center windows in Gnome: gsettings set org.gnome.mutter center-new-windows true"
 echo "To have Junction find Chrome profiles: update-desktop-database ~/.local/share/flatpak/exports/share/applications"
-echo "Gnome Shell Extensions to instlal: Caffeine, Just Perfection, Pano - Clipboard Manager, System Monitor"
+echo "Gnome Shell Extensions to instlal: Caffeine, Just Perfection, Pano - Clipboard Manager, System Monitor, Tailscale Status"
