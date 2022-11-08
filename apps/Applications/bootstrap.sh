@@ -47,7 +47,7 @@ sudo apt update
 sudo apt install -y albert bat build-essential fprintd gnuplot graphviz htop input-remapper myrepos ncdu podman python3-pip silversearcher-ag sshuttle sublime-text texlive-full tig tmux vcsh vim virt-manager virt-viewer virtinst yubikey-manager yubikey-personalization-gui zsh zsh-autosuggestions zsh-syntax-highlighting gnome-keyring flatpak
 
 # Install snaps
-sudo snap install authy bitwarden icloud-for-linux mailspring mattermost-desktop morgen multipass slack spotify telegram-desktop zotero-snap
+sudo snap install authy bitwarden icloud-for-linux mattermost-desktop multipass slack spotify telegram-desktop zotero-snap
 
 # Install tailscale
 wget -qO - https://tailscale.com/install.sh | sh
@@ -74,6 +74,11 @@ wget -qO - https://raw.githubusercontent.com/zimfw/install/master/install.zsh | 
 sudo chsh -s /usr/bin/zsh tmoyer
 
 # Useful commands to run depending on the desktop
+echo "Need to run Stow to setup symlinks"
 echo "To turn off Evolution alarm pop-ups: gsettings set org.gnome.evolution-data-server.calendar notify-with-tray true"
 echo "To set Juntion as the default browser: xdg-settings set default-web-browser re.sonny.Junction.desktop"
 echo "To ensure that the Chrome profile options are in the menu: update-desktop-database ~/.local/share/applications"
+echo "Morgen and Mailspring not installed from snap"
+echo "Center windows in Gnome: gsettings set org.gnome.mutter center-new-windows true"
+echo "To have Junction find Chrome profiles: update-desktop-database ~/.local/share/flatpak/exports/share/applications"
+echo "Gnome Shell Extensions to instlal: Caffeine, Just Perfection, Pano - Clipboard Manager, System Monitor"
