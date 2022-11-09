@@ -312,6 +312,10 @@ fi
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
+function swap_yubikey () {
+  gpg-connect-agent "scd serialno" "learn --force" /bye
+}
+
 #--------------------------------
 # system-specific customizations
 #--------------------------------
