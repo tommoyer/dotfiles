@@ -73,6 +73,12 @@ wget -qO - https://raw.githubusercontent.com/zimfw/install/master/install.zsh | 
 # Set default shell to zsh
 sudo chsh -s /usr/bin/zsh tmoyer
 
+# Setup busylight
+python3 -m pip install busylight-for-humans
+busylight udev-rules -o 99-busylights.rules
+sudo cp 99-busylights.rules /etc/udev/rules.d
+sudo udevadm control -R
+
 # Useful commands to run depending on the desktop
 echo "Need to run Stow to setup symlinks"
 echo "To turn off Evolution alarm pop-ups: gsettings set org.gnome.evolution-data-server.calendar notify-with-tray true"
@@ -82,3 +88,4 @@ echo "Morgen and Mailspring not installed from snap"
 echo "Center windows in Gnome: gsettings set org.gnome.mutter center-new-windows true"
 echo "To have Junction find Chrome profiles: update-desktop-database ~/.local/share/flatpak/exports/share/applications"
 echo "Gnome Shell Extensions to instlal: Caffeine, Just Perfection, Pano - Clipboard Manager, System Monitor, Tailscale Status"
+

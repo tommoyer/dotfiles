@@ -206,6 +206,7 @@ path_if_exists /usr/local/MacGPG2/bin
 path_if_exists ${HOME}/.local/bin
 # Java
 path_if_exists /usr/local/opt/openjdk/bin
+path_if_exists ${HOME}/.local/bin
 
 #---------
 # Aliases
@@ -228,6 +229,9 @@ alias v=vagrant
 alias chmod='chmod -c'
 alias chown='chown -c'
 alias less='less -F'
+alias meeting='busylight on red'
+alias no_meeting='busylight on'
+alias do_not_disturb='busylight on 0xe47200'
 
 #-----------
 # Utilities
