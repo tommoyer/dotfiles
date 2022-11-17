@@ -321,6 +321,10 @@ function swap_yubikey () {
   gpg-connect-agent "scd serialno" "learn --force" /bye
 }
 
+# Debian packaging variables
+export DEBFULLNAME="Tom Moyer"
+export DEBEMAIL="tom.moyer@canonical.com"
+
 #--------------------------------
 # system-specific customizations
 #--------------------------------
