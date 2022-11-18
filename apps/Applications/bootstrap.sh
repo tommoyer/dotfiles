@@ -58,7 +58,7 @@ sudo apt-add-repository -y ppa:system76-dev/stable
 sudo apt update
 
 # Install apt packages
-sudo apt install -y albert bat build-essential flatpak fprintd gir1.2-gda-5.0 gir1.2-gsound-1.0 gir1.2-gtop-2.0 gnome-keyring gnome-shell-extension-manager gnome-tweaks gnuplot graphviz htop input-remapper libaio1 libdebconfclient0 libdevmapper-event1.02.1 libfido2-1 libfuse2 libgtop2-dev login lvm2 mokutil myrepos ncdu pcscd podman python3-pip silversearcher-ag sshuttle stow sublime-text texlive-full tig tmux vim virt-manager virt-viewer virtinst wl-clipboard yubikey-manager yubikey-personalization zsh-autosuggestions zsh-syntax-highlighting zsh system76-driver scdaemon curl
+sudo apt install -y albert bat build-essential flatpak fprintd gir1.2-gda-5.0 gir1.2-gsound-1.0 gir1.2-gtop-2.0 gnome-keyring gnome-shell-extension-manager gnome-tweaks gnuplot graphviz htop input-remapper libaio1 libdebconfclient0 libdevmapper-event1.02.1 libfido2-1 libfuse2 libgtop2-dev login lvm2 mokutil myrepos ncdu pcscd podman python3-pip silversearcher-ag sshuttle stow sublime-text texlive-full tig tmux vim virt-manager virt-viewer virtinst wl-clipboard yubikey-manager yubikey-personalization zsh-autosuggestions zsh-syntax-highlighting zsh system76-driver scdaemon curl yubikey-manager libpam-yubico libpam-u2f
 
 # Install snaps
 sudo snap install authy bitwarden icloud-for-linux mattermost-desktop multipass slack spotify telegram-desktop zotero-snap morgen mailspring
@@ -102,3 +102,26 @@ echo "To ensure that the Chrome profile options are in the menu: update-desktop-
 echo "Center windows in Gnome: gsettings set org.gnome.mutter center-new-windows true"
 echo "To have Junction find Chrome profiles: update-desktop-database ~/.local/share/flatpak/exports/share/applications"
 echo "Gnome Shell Extensions to install: Extension Sync"
+
+echo << EOF
+sudo apt install libpam-u2f
+pamu2fcfg | sudo tee -a /etc/u2f_mappings
+
+# (At this point, press the button. You should see a long string of numbers.
+# If you don't, make sure you have `udev` setup correctly.)
+
+sudo -i
+echo >> /etc/u2f_mappings
+cd /etc/pam.d
+
+echo 'auth sufficient pam_u2f.so authfile=/etc/u2f_mappings cue' > common-u2f
+
+for f in $(grep -l "@include common-auth" *); do
+  if [[ $f == *~ ]]; then continue; fi
+  if grep -q "@include common-u2f" $f; then continue; fi
+  mv $f $f~
+  awk '/@include common-auth/ {print "@include common-u2f"}; {print}' $f~ > $f
+done
+
+exit
+EOF
