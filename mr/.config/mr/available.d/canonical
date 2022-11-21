@@ -1,0 +1,4 @@
+
+[Repos/canonical/seg-internal-tools]
+checkout = git clone 'git@github.com:canonical/seg-internal-tools.git' 'seg-internal-tools'
+skip = [ "$1" = push ]
