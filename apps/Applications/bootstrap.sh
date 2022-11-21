@@ -58,7 +58,7 @@ sudo apt-add-repository -y ppa:system76-dev/stable
 sudo apt update
 
 # Install apt packages
-sudo apt install -y albert bat build-essential flatpak fprintd gir1.2-gda-5.0 gir1.2-gsound-1.0 gir1.2-gtop-2.0 gnome-keyring gnome-shell-extension-manager gnome-tweaks gnuplot graphviz htop input-remapper libaio1 libdebconfclient0 libdevmapper-event1.02.1 libfido2-1 libfuse2 libgtop2-dev login lvm2 mokutil myrepos ncdu pcscd podman python3-pip silversearcher-ag sshuttle stow sublime-text texlive-full tig tmux vim virt-manager virt-viewer virtinst wl-clipboard yubikey-manager yubikey-personalization zsh-autosuggestions zsh-syntax-highlighting zsh system76-driver scdaemon curl yubikey-manager libpam-yubico libpam-u2f
+sudo apt install -y albert bat build-essential flatpak fprintd gir1.2-gda-5.0 gir1.2-gsound-1.0 gir1.2-gtop-2.0 gnome-keyring gnome-shell-extension-manager gnome-tweaks gnuplot graphviz htop input-remapper libaio1 libdebconfclient0 libdevmapper-event1.02.1 libfido2-1 libfuse2 libgtop2-dev login lvm2 mokutil myrepos ncdu pcscd podman python3-pip silversearcher-ag sshuttle stow sublime-text texlive-full tig tmux vim virt-manager virt-viewer virtinst wl-clipboard yubikey-manager yubikey-personalization zsh-autosuggestions zsh-syntax-highlighting zsh system76-driver scdaemon curl yubikey-manager libpam-yubico libpam-u2f btop
 
 # Install snaps
 sudo snap install authy bitwarden icloud-for-linux mattermost-desktop multipass slack spotify telegram-desktop zotero-snap morgen mailspring
