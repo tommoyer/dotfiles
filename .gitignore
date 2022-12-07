@@ -2,3 +2,4 @@ mr/.config/mr/config.d
 apps/Applications/yubikey-manager-qt-1.2.4b-linux.AppImage
 subl/Library/Application Support/Sublime Text 3/Local/Session.sublime_session
 mimeinfo.cache
+mimeapps.list
