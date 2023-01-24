@@ -21,10 +21,9 @@
 	"gutter": true,
 	"ignored_packages":
 	[
-		"Markdown",
 	],
 	"line_numbers": true,
 	"tab_size": 4,
-	"theme": "Adaptive.sublime-theme",
+	"theme": "Default Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 }

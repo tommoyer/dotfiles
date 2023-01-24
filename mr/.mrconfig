@@ -8,6 +8,9 @@ include = cat $HOME/.config/mr/config.d/*
 checkout = git clone git@github.com:tommoyer/dotfiles.git ${HOME}/.dotfiles
 order = 1
 
+[$HOME/Repos/tommoyer/bootstrap]
+checkout = git clone git@github.com:tommoyer/bootstrap.git ${HOME}/Repos/tommoyer/bootstrap
+
 [$HOME/.apps/fzf]
 checkout = git clone https://github.com/junegunn/fzf.git $HOME/.apps/fzf
 skip = [ "$1" = push ]
