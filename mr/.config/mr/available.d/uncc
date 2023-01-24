@@ -12,8 +12,8 @@ checkout = git clone git@gitlab.com:tmoyer2/www.git ~/Repos/tmoyer2/www
 # [$HOME/Repos/crest-lab/classes/itis-3246-scripts]
 # checkout = git clone git@gitlab.com:crest-lab/classes/itis-3246-scripts.git ~/Repos/crest-lab/classes/itis-3246-scripts
 
-# [$HOME/Repos/crest-lab/proposals/provenance-graph-analytics]
-# checkout = git clone git@gitlab.com:crest-lab/proposals/provenance-graph-analytics.git ~/Repos/crest-lab/proposals/provenance-graph-analytics
+[$HOME/Repos/crest-lab/proposals/provenance-graph-analytics]
+checkout = git clone git@gitlab.com:crest-lab/proposals/provenance-graph-analytics.git ~/Repos/crest-lab/proposals/provenance-graph-analytics
 
 # [$HOME/Repos/crest-lab/sdn/paper-dataplane-security-framework]
 # checkout = git clone git@gitlab.com:crest-lab/sdn/paper-dataplane-security-framework.git ~/Repos/crest-lab/sdn/paper-dataplane-security-framework
