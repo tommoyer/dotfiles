@@ -1,10 +1,5 @@
 
-[Repos/tommoyer/gnome-shell-extension-busylighttoggle]
-checkout = git clone 'git@github.com:tommoyer/gnome-shell-extension-busylighttoggle.git' 'gnome-shell-extension-busylighttoggle'
-
 [$HOME/Repos/tmoyer2/www]
 checkout = git clone git@gitlab.com:tmoyer2/www.git ~/Repos/tmoyer2/www
 
-[$HOME/Repos/home-server/bootstrap]
-checkout = git clone tmoyer@home-server:/home/tmoyer/bootstrap.git ~/Repos/home-server/bootstrap
 
