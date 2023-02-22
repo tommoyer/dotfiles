@@ -3,3 +3,8 @@ apps/Applications/yubikey-manager-qt-1.2.4b-linux.AppImage
 subl/Library/Application Support/Sublime Text 3/Local/Session.sublime_session
 mimeinfo.cache
 mimeapps.list
+ssh/.ssh/known_hosts
+ssh/.ssh/known_hosts.old
+subl/.config/sublime-text/Installed Packages
+subl/.config/sublime-text/Local
+subl/.config/sublime-text/Packages
