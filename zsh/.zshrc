@@ -209,7 +209,7 @@ path_if_exists ${HOME}/.local/bin
 # Java
 path_if_exists /usr/local/opt/openjdk/bin
 path_if_exists ${HOME}/.local/bin
-
+path_if_exists ${HOME}/node_modules/.bin
 #---------
 # Aliases
 #---------
