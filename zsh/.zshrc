@@ -279,8 +279,6 @@ then
     # ZSH autosuggestions
     source_if_exists /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-    export EDITOR="subl -w"
-
     # Fix missing _ssh_hosts error
     autoload _ssh_hosts
 fi
@@ -307,6 +305,9 @@ then
     fi
 
 fi
+
+export EDITOR=nvim
+export VISUAL=nvim
 
 # Load any SSH keys into ssh-agent
 #ssh-add -qk
