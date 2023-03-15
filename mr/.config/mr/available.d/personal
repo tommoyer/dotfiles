@@ -4,3 +4,7 @@ checkout = git clone git@github.com:tommoyer/www.git ~/Repos/tommoyer/www
 
 [$HOME/Repos/tommoyer/Watson]
 checkout = git clone git@github.com:tommoyer/Watson.git ~/Repos/tommoyer/Watson
+
+[$HOME/Repos/tommoyer/watson2sf]
+checkout = git clone git@github.com:tommoyer/watson2sf.git ~/Repos/tommoyer/watson2sf
+
