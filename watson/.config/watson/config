@@ -1,3 +1,12 @@
 [options]
 stop_on_start = true
+confirm_new_project = true
+log_current = true
+report_current = true
+
+[default_tags]
+team = 00250444
+education = 00250460
+internal = 00255865
+lws = 00255868
 
