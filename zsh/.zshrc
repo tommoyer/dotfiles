@@ -306,8 +306,8 @@ then
 
 fi
 
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
 
 # Load any SSH keys into ssh-agent
 #ssh-add -qk
