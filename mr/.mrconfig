@@ -15,10 +15,6 @@ checkout = git clone git@github.com:tommoyer/bootstrap.git ${HOME}/Repos/tommoye
 checkout = git clone https://github.com/junegunn/fzf.git $HOME/.apps/fzf
 skip = [ "$1" = push ]
 
-[$HOME/.apps/z-jump]
-checkout = git clone https://github.com/rupa/z.git $HOME/.apps/z-jump
-skip = [ "$1" = push ]
-
 [$HOME/.apps/latexrun]
 checkout = git clone https://github.com/aclements/latexrun.git $HOME/.apps/latexrun
 skip = [ "$1" = push ]
