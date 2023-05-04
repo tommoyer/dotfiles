@@ -19,6 +19,7 @@
 		"Package Control",
 		"SideBarEnhancements",
 		"SmartMarkdown",
-		"WordingStatus"
+		"TOML",
+		"WordingStatus",
 	],
 }

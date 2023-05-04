@@ -15,15 +15,16 @@
 			"selector": "text.tex.latex",
 		}
 	],
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"color_scheme": "Monokai.sublime-color-scheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"font_size": 11,
 	"gutter": true,
 	"ignored_packages":
 	[
+		"MarkdownPreview",
 	],
 	"line_numbers": true,
 	"tab_size": 4,
-	"theme": "Default Dark.sublime-theme",
+	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true,
 }
