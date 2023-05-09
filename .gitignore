@@ -9,3 +9,4 @@ subl/.config/sublime-text/Installed Packages
 subl/.config/sublime-text/Local
 subl/.config/sublime-text/Packages
 apps/Applications/TickTick-linux-x64/
+apps/Applications/*.log
