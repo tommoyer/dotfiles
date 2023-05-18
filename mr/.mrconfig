@@ -30,3 +30,4 @@ skip = [ "$1" = push ]
 [$HOME/.apps/git-latexdiff]
 checkout = git clone https://gitlab.com/git-latexdiff/git-latexdiff.git $HOME/.apps/git-latexdiff
 skip = [ "$1" = push ]
+
