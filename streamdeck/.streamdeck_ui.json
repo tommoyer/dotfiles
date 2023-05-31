@@ -6,13 +6,15 @@
                 "0": {
                     "0": {
                         "icon": "/home/tmoyer/.local/share/flatpak/app/md.obsidian.Obsidian/current/active/files/share/icons/hicolor/512x512/apps/md.obsidian.Obsidian.png",
-                        "command": "xdg-open \"obsidian://advanced-uri?vault=Notes&commandname=QuickAdd%3A%20Daily%20Setup\n\""
+                        "command": "xdg-open \"obsidian://advanced-uri?vault=Notes&commandname=QuickAdd%3A%20Daily%20Setup\""
                     },
                     "1": {
                         "command": "gnome-terminal",
                         "icon": "/usr/share/icons/hicolor/scalable/apps/org.gnome.Terminal.svg"
                     },
-                    "2": {},
+                    "2": {
+                        "command": ""
+                    },
                     "3": {},
                     "4": {},
                     "5": {},
