@@ -252,3 +252,5 @@ export DEBEMAIL="tom.moyer@canonical.com"
 # system-specific customizations
 #--------------------------------
 source_if_exists ~/.local_profile
+
+neofetch
