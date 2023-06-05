@@ -1,4 +1,7 @@
 
+[$HOME/.dotfiles]
+checkout = git clone git@github.com:tommoyer/dotfiles.git ~/.dotfiles
+
 [$HOME/Repos/tommoyer/www]
 checkout = git clone git@github.com:tommoyer/www.git ~/Repos/tommoyer/www
 
