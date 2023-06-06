@@ -173,6 +173,16 @@ function swap_yubikey () {
   gpg-connect-agent "scd serialno" "learn --force" /bye
 }
 
+function jiggle_jiggle () {
+  while true
+  do
+    xdotool mousemove 100 500
+    sleep 60
+    xdotool mousemove 500 100
+    sleep 60
+  done
+}
+
 #--------------------
 # PATH configuration
 #--------------------
