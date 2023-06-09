@@ -10,7 +10,7 @@
                     },
                     "1": {
                         "command": "konsole",
-                        "icon": "/usr/share/icons/Humanity/apps/128/konsole.svg"
+                        "icon": "/usr/share/icons/breeze/apps/64/utilities-terminal.svg"
                     },
                     "2": {
                         "command": ""
