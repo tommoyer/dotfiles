@@ -3,5 +3,5 @@ Encoding=UTF-8
 Version=1.0
 Type=Application
 Terminal=false
-Exec=/home/tmoyer/.local/bin/streamdeckn
+Exec=/home/tmoyer/.local/bin/streamdeck
 Name=Streamdeck GUI
