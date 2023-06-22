@@ -37,7 +37,7 @@ Status:: $status
 datetime_format = '%Y-%m-%d %H:%M'
 date_format = '%Y-%m-%d'
 year_format = '%Y'
-status_choices = click.Choice(['pending', 'in-progress', 'dropped', 'done'])
+status_choices = click.Choice(['pending', 'in-progress', 'dropped', 'done', 'long-term'])
 
 
 def main():
