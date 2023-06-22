@@ -68,11 +68,12 @@ def main():
             sys.exit(-1)
 
     # If project folder doesn't exist prompt to create
-    if click.confirm(f'{project_path.parent} does not exist. Create it?'):
-        project_path.parent.mkdir(parents=True, exist_ok=True)
-    else:
-        print('Cannot create the necessary folders. Exiting...')
-        sys.exit(-1)
+    if not project_path.parent.exists():
+        if click.confirm(f'{project_path.parent} does not exist. Create it?'):
+            project_path.parent.mkdir(parents=True, exist_ok=True)
+        else:
+            print('Cannot create the necessary folders. Exiting...')
+            sys.exit(-1)
 
     with open(note_path, 'x') as f:
         f.write(note)
