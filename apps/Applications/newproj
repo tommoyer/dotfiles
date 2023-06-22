@@ -24,6 +24,7 @@ note_template = Template('''
 ---
 creation date: $date_time
 tags: Project $name $folder$year
+keys: $keys
 ---
 
 Status:: $status
@@ -37,7 +38,7 @@ Status:: $status
 datetime_format = '%Y-%m-%d %H:%M'
 date_format = '%Y-%m-%d'
 year_format = '%Y'
-status_choices = click.Choice(['pending', 'in-progress', 'dropped', 'done', 'long-term'])
+status_choices = click.Choice(['pending', 'in-progress', 'dropped', 'done', 'long-term', 'waiting'])
 
 
 def main():
@@ -45,13 +46,15 @@ def main():
     project_name = click.prompt('Please provide a name for the project', type=str)
     project_folder = click.prompt('Please provide a folder name (empty if not needed)', type=str, default='')
     status = click.prompt('Current status', type=status_choices)
+    keys = click.prompt('Comma separated list of keywords', type=str)
 
     note = note_template.substitute(name=project_name,
                                     folder=f'{project_folder} 'if project_folder != '' else '',
                                     year=current_date.strftime(year_format),
                                     date_time=current_date.strftime(datetime_format),
                                     date=current_date.strftime(date_format),
-                                    status=status)
+                                    status=status,
+                                    keys=keys)
 
     note_path = notes_directory.joinpath(project_folder).joinpath(f'{project_name}.md').expanduser()
     project_path = projects_directory.joinpath(project_folder).joinpath(project_name).expanduser()
