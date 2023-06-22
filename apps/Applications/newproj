@@ -1,0 +1,84 @@
+#!/usr/bin/python3
+
+'''
+Inputs:
+ - Project name - Required
+ - Folder (e.g. Core, Teaching, Canonical, etc.) - Optional
+
+Outputs:
+ - A folder in ~/Projects/[<Folder>]/<Name>
+ - A note in ~/Notes/Projects/[<Folder>]/Name.md with a template
+'''
+
+import click
+import sys
+
+from datetime import datetime
+from string import Template
+from pathlib import Path
+
+notes_directory = Path('~/Notes/Projects/')
+projects_directory = Path('~/Projects/')
+
+note_template = Template('''
+---
+creation date: $date_time
+tags: Project $name $folder$year
+---
+
+Status:: $status
+
+# Project Notes
+
+## $date
+
+''')
+
+datetime_format = '%Y-%m-%d %H:%M'
+date_format = '%Y-%m-%d'
+year_format = '%Y'
+status_choices = click.Choice(['pending', 'in-progress', 'dropped', 'done'])
+
+
+def main():
+    current_date = datetime.today()
+    project_name = click.prompt('Please provide a name for the project', type=str)
+    project_folder = click.prompt('Please provide a folder name (empty if not needed)', type=str, default='')
+    status = click.prompt('Current status', type=status_choices)
+
+    note = note_template.substitute(name=project_name,
+                                    folder=f'{project_folder} 'if project_folder != '' else '',
+                                    year=current_date.strftime(year_format),
+                                    date_time=current_date.strftime(datetime_format),
+                                    date=current_date.strftime(date_format),
+                                    status=status)
+
+    note_path = notes_directory.joinpath(project_folder).joinpath(f'{project_name}.md').expanduser()
+    project_path = projects_directory.joinpath(project_folder).joinpath(project_name).expanduser()
+
+    # If note folder doesn't exist prompt to create
+    if not note_path.parent.exists():
+        if click.confirm(f'{note_path.parent} does not exist. Create it?'):
+            note_path.parent.mkdir(parents=True, exist_ok=True)
+        else:
+            print('Cannot create the necessary folders. Exiting...')
+            sys.exit(-1)
+
+    # If project folder doesn't exist prompt to create
+    if click.confirm(f'{project_path.parent} does not exist. Create it?'):
+        project_path.parent.mkdir(parents=True, exist_ok=True)
+    else:
+        print('Cannot create the necessary folders. Exiting...')
+        sys.exit(-1)
+
+    with open(note_path, 'x') as f:
+        f.write(note)
+
+    project_path.mkdir()
+
+    print(f'Created a project note at {note_path}')
+    print(f'Created a project folder at {project_path}')
+
+
+if __name__ == '__main__':
+    main()
