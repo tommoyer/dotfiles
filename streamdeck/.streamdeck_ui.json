@@ -9,8 +9,8 @@
                         "command": "xdg-open \"obsidian://advanced-uri?vault=Notes&commandname=QuickAdd%3A%20Daily%20Setup\""
                     },
                     "1": {
-                        "command": "konsole",
-                        "icon": "/usr/share/icons/breeze/apps/64/utilities-terminal.svg"
+                        "command": "gnome-terminal",
+                        "icon": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Terminal.png"
                     },
                     "2": {
                         "command": ""
