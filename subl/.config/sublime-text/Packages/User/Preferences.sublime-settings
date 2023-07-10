@@ -21,11 +21,10 @@
 	"gutter": true,
 	"ignored_packages":
 	[
-		"MarkdownPreview",
 	],
 	"line_numbers": true,
 	"tab_size": 4,
 	"theme": "Default.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	"ignored_packages": []
+	/*"ignored_packages": []*/
 }
