@@ -26,16 +26,34 @@
                         "command": "/home/tmoyer/Applications/toggle-light.sh"
                     },
                     "5": {},
-                    "6": {},
-                    "7": {},
-                    "8": {},
+                    "6": {
+                        "icon": "/home/tmoyer/Pictures/streamdeck/previous-svgrepo-com.svg",
+                        "keys": "media_previous"
+                    },
+                    "7": {
+                        "icon": "/home/tmoyer/Pictures/streamdeck/video-play-pause-svgrepo-com.svg",
+                        "keys": "media_play_pause"
+                    },
+                    "8": {
+                        "icon": "/home/tmoyer/Pictures/streamdeck/next-svgrepo-com.svg",
+                        "keys": "media_next"
+                    },
                     "9": {},
                     "10": {
                         "keys": ""
                     },
-                    "11": {},
-                    "12": {},
-                    "13": {},
+                    "11": {
+                        "icon": "/home/tmoyer/Pictures/streamdeck/speaker-1-svgrepo-com.svg",
+                        "keys": "media_volume_down"
+                    },
+                    "12": {
+                        "icon": "/home/tmoyer/Pictures/streamdeck/speaker-none-svgrepo-com.svg",
+                        "keys": "media_volume_mute"
+                    },
+                    "13": {
+                        "icon": "/home/tmoyer/Pictures/streamdeck/speaker-svgrepo-com.svg",
+                        "keys": "media_volume_up"
+                    },
                     "14": {}
                 },
                 "1": {

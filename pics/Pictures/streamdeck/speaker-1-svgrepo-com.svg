@@ -1,12 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="800px" height="800px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-    <title>ic_fluent_speaker_1_24_filled</title>
-    <desc>Created with Sketch.</desc>
-    <g id="🔍-Product-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="ic_fluent_speaker_1_24_filled" fill="#212121" fill-rule="nonzero">
-            <path d="M14.7041458,3.44249572 C14.8951735,3.66820635 15,3.95432916 15,4.25002642 L15,19.7516569 C15,20.4420128 14.4403559,21.0016569 13.75,21.0016569 C13.4542072,21.0016569 13.1679984,20.8967628 12.9422573,20.7056232 L7.97512872,16.4998542 L4.25,16.4998542 C3.00735931,16.4998542 2,15.4924949 2,14.2498542 L2,9.74985424 C2,8.50721355 3.00735931,7.49985424 4.25,7.49985424 L7.97522325,7.49985424 L12.9424693,3.29588063 C13.4694295,2.84989375 14.2581589,2.91553555 14.7041458,3.44249572 Z M17.1035389,8.64021534 C17.4571007,8.42442159 17.9186545,8.53610465 18.1344483,8.88966643 C18.7082504,9.82979793 18.995732,10.8818435 18.995732,12.0303956 C18.995732,13.1789477 18.7082504,14.2309932 18.1344483,15.1711247 C17.9186545,15.5246865 17.4571007,15.6363696 17.1035389,15.4205758 C16.7499771,15.2047821 16.6382941,14.7432282 16.8540878,14.3896664 C17.2822376,13.6881753 17.495732,12.9068876 17.495732,12.0303956 C17.495732,11.1539036 17.2822376,10.3726158 16.8540878,9.67112473 C16.6382941,9.31756295 16.7499771,8.85600909 17.1035389,8.64021534 Z" id="🎨-Color">
-</path>
-        </g>
-    </g>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="800px"
+   height="800px"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg9"
+   sodipodi:docname="speaker-1-svgrepo-com.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13" />
+  <sodipodi:namedview
+     id="namedview11"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.2525"
+     inkscape:cx="263.07385"
+     inkscape:cy="400"
+     inkscape:window-width="1452"
+     inkscape:window-height="1205"
+     inkscape:window-x="3375"
+     inkscape:window-y="456"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg9" />
+  <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+  <title
+     id="title2">ic_fluent_speaker_1_24_filled</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <g
+     id="ic_fluent_speaker_1_24_filled"
+     fill="#212121"
+     fill-rule="nonzero"
+     style="stroke:none;stroke-width:1;fill:#3da9fc;fill-opacity:1">
+    <path
+       d="M 14.704146,3.4424957 C 14.895174,3.6682064 15,3.9543292 15,4.2500264 V 19.751657 c 0,0.690356 -0.559644,1.25 -1.25,1.25 -0.295793,0 -0.582002,-0.104894 -0.807743,-0.296034 L 7.9751287,16.499854 H 4.25 c -1.2426407,0 -2.25,-1.007359 -2.25,-2.25 V 9.7498542 c 0,-1.2426406 1.0073593,-2.25 2.25,-2.25 H 7.9752232 L 12.942469,3.2958806 c 0.526961,-0.4459868 1.31569,-0.380345 1.761677,0.1466151 z m 2.399393,5.1977196 c 0.353562,-0.2157937 0.815115,-0.1041106 1.030909,0.2494511 0.573802,0.9401315 0.861284,1.9921776 0.861284,3.1407296 0,1.148552 -0.287482,2.200597 -0.861284,3.140729 -0.215794,0.353562 -0.677347,0.465245 -1.030909,0.249451 -0.353562,-0.215794 -0.465245,-0.677348 -0.249451,-1.03091 0.42815,-0.701491 0.641644,-1.482778 0.641644,-2.35927 0,-0.876492 -0.213494,-1.65778 -0.641644,-2.3592713 -0.215794,-0.3535618 -0.104111,-0.8151156 0.249451,-1.0309094 z"
+       id="🎨-Color"
+       style="fill:#3da9fc;fill-opacity:1" />
+  </g>
 </svg>
