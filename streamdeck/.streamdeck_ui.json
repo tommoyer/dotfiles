@@ -13,10 +13,18 @@
                         "icon": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Terminal.png"
                     },
                     "2": {
-                        "command": ""
+                        "command": "brave-browser",
+                        "icon": "/opt/brave.com/brave/product_logo_256.png",
+                        "text": ""
                     },
-                    "3": {},
-                    "4": {},
+                    "3": {
+                        "icon": "/home/tmoyer/Pictures/cooling-fan_9153825.png",
+                        "command": "/home/tmoyer/Applications/toggle-fan.sh"
+                    },
+                    "4": {
+                        "icon": "/home/tmoyer/Pictures/light-bulb_2988036.png",
+                        "command": "/home/tmoyer/Applications/toggle-light.sh"
+                    },
                     "5": {},
                     "6": {},
                     "7": {},
