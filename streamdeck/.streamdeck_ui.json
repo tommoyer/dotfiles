@@ -18,11 +18,11 @@
                         "text": ""
                     },
                     "3": {
-                        "icon": "/home/tmoyer/Pictures/cooling-fan_9153825.png",
+                        "icon": "/home/tmoyer/Pictures/streamdeck/cooling-fan_9153825.png",
                         "command": "/home/tmoyer/Applications/toggle-fan.sh"
                     },
                     "4": {
-                        "icon": "/home/tmoyer/Pictures/light-bulb_2988036.png",
+                        "icon": "/home/tmoyer/Pictures/streamdeck/light-bulb_2988036.png",
                         "command": "/home/tmoyer/Applications/toggle-light.sh"
                     },
                     "5": {},
@@ -30,7 +30,9 @@
                     "7": {},
                     "8": {},
                     "9": {},
-                    "10": {},
+                    "10": {
+                        "keys": ""
+                    },
                     "11": {},
                     "12": {},
                     "13": {},
