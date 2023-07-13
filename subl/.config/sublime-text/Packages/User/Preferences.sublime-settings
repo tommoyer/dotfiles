@@ -15,7 +15,7 @@
 			"selector": "text.tex.latex",
 		}
 	],
-	"color_scheme": "Monokai.sublime-color-scheme",
+	"color_scheme": "Solarized (dark).sublime-color-scheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"font_size": 11,
 	"gutter": true,
