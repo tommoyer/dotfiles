@@ -213,7 +213,8 @@ alias less='less -F'
 # Utilities
 #-----------
 # Fuzzy find for ZSH
-source_if_exists ~/.fzf.zsh
+source_if_exists /usr/share/doc/fzf/examples/key-bindings.zsh
+source_if_exists /usr/share/doc/fzf/examples/completion.zsh
 
 # Bat theme
 export BAT_THEME="Monokai Extended"

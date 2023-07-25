@@ -11,23 +11,23 @@ order = 1
 [$HOME/Repos/tommoyer/bootstrap]
 checkout = git clone git@github.com:tommoyer/bootstrap.git ${HOME}/Repos/tommoyer/bootstrap
 
-[$HOME/.apps/fzf]
-checkout = git clone https://github.com/junegunn/fzf.git $HOME/.apps/fzf
-skip = [ "$1" = push ]
+# [$HOME/.apps/fzf]
+# checkout = git clone https://github.com/junegunn/fzf.git $HOME/.apps/fzf
+# skip = [ "$1" = push ]
 
-[$HOME/.apps/latexrun]
-checkout = git clone https://github.com/aclements/latexrun.git $HOME/.apps/latexrun
-skip = [ "$1" = push ]
+# [$HOME/.apps/latexrun]
+# checkout = git clone https://github.com/aclements/latexrun.git $HOME/.apps/latexrun
+# skip = [ "$1" = push ]
 
-[$HOME/.apps/prettyping]
-checkout = git clone https://github.com/denilsonsa/prettyping.git $HOME/.apps/prettyping
-skip = [ "$1" = push ]
+# [$HOME/.apps/prettyping]
+# checkout = git clone https://github.com/denilsonsa/prettyping.git $HOME/.apps/prettyping
+# skip = [ "$1" = push ]
 
 [$HOME/.apps/diff-so-fancy]
 checkout = git clone https://github.com/so-fancy/diff-so-fancy.git $HOME/.apps/diff-so-fancy
 skip = [ "$1" = push ]
 
-[$HOME/.apps/git-latexdiff]
-checkout = git clone https://gitlab.com/git-latexdiff/git-latexdiff.git $HOME/.apps/git-latexdiff
-skip = [ "$1" = push ]
+# [$HOME/.apps/git-latexdiff]
+# checkout = git clone https://gitlab.com/git-latexdiff/git-latexdiff.git $HOME/.apps/git-latexdiff
+# skip = [ "$1" = push ]
 
