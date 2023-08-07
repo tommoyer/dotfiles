@@ -17,6 +17,6 @@ checkout = git clone git@github.com:tommoyer/itis-vm-repl.git ~/Repos/tommoyer/i
 [$HOME/Repos/tommoyer/timekpr-next]
 checkout = git clone git@github.com:tommoyer/timekpr-next.git ~/Repos/tommoyer/timekpr-next
 
-[$HOME/Repos/tommoyer/projects]
-checkout = git clone git@github.com:tommoyer/projects.git ~/Repos/tommoyer/projects
+[$HOME/Repos/tommoyer/tmm-projects]
+checkout = git clone git@github.com:tommoyer/tmm-projects.git ~/Repos/tommoyer/tmm-projects
 

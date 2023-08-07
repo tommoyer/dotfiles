@@ -191,7 +191,7 @@ path_if_exists ${HOME}/Applications
 path_if_exists ${HOME}/bin
 # Local PIP
 path_if_exists ${HOME}/.local/bin
-path_if_exists ${HOME}/node_modules/.bin
+path_if_exists ${HOME}/.npm-global/bin
 #---------
 # Aliases
 #---------
