@@ -208,6 +208,9 @@ alias v=vagrant
 alias chmod='chmod -c'
 alias chown='chown -c'
 alias less='less -F'
+alias canonical='google-chrome --profile-directory=Default'
+alias gmail='google-chrome --profile-directory="Profile 1"'
+alias uncc='google-chrome --profile-directory="Profile 2"'
 
 #-----------
 # Utilities
