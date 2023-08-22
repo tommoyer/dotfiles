@@ -6,15 +6,15 @@
                 "0": {
                     "0": {
                         "icon": "/home/tmoyer/.local/share/flatpak/app/md.obsidian.Obsidian/current/active/files/share/icons/hicolor/512x512/apps/md.obsidian.Obsidian.png",
-                        "command": "xdg-open \"obsidian://advanced-uri?vault=Notes&commandname=QuickAdd%3A%20Daily%20Setup\""
+                        "command": "xdg-open \"obsidian://advanced-uri?vault=Notes&workspace=main\""
                     },
                     "1": {
                         "command": "gnome-terminal",
                         "icon": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Terminal.png"
                     },
                     "2": {
-                        "command": "brave-browser",
-                        "icon": "/opt/brave.com/brave/product_logo_256.png",
+                        "command": "google-chrome",
+                        "icon": "/opt/google/chrome/product_logo_256.png",
                         "text": ""
                     },
                     "3": {
@@ -25,7 +25,10 @@
                         "icon": "/home/tmoyer/Pictures/streamdeck/light-bulb_2988036.png",
                         "command": "/home/tmoyer/Applications/toggle-light.sh"
                     },
-                    "5": {},
+                    "5": {
+                        "icon": "/opt/Moneydance/resources/moneydance_icon512.png",
+                        "command": "moneydance"
+                    },
                     "6": {
                         "icon": "/home/tmoyer/Pictures/streamdeck/previous-svgrepo-com.svg",
                         "keys": "media_previous"
@@ -38,7 +41,10 @@
                         "icon": "/home/tmoyer/Pictures/streamdeck/next-svgrepo-com.svg",
                         "keys": "media_next"
                     },
-                    "9": {},
+                    "9": {
+                        "command": "/opt/sublime_text/sublime_text",
+                        "icon": "/opt/sublime_text/Icon/256x256/sublime-text.png"
+                    },
                     "10": {
                         "keys": ""
                     },
