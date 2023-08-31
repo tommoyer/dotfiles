@@ -13,7 +13,7 @@
                         "icon": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Terminal.png"
                     },
                     "2": {
-                        "command": "firefox -P",
+                        "command": "env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/firefox_firefox.desktop /snap/bin/firefox %u",
                         "icon": "/usr/share/icons/hicolor/256x256/apps/firefox.png",
                         "text": ""
                     },
