@@ -9,3 +9,4 @@
 
 skip_global_compinit=1
 
+export XDG_DATA_DIRS="/home/tmoyer/.local:${XDG_DATA_DIRS}"
