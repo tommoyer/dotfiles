@@ -13,8 +13,8 @@
                         "icon": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Terminal.png"
                     },
                     "2": {
-                        "command": "env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/firefox_firefox.desktop /snap/bin/firefox -P",
-                        "icon": "/usr/share/icons/hicolor/256x256/apps/firefox.png",
+                        "command": "google-chrome-stable",
+                        "icon": "/opt/google/chrome/product_logo_256.png",
                         "text": ""
                     },
                     "3": {
