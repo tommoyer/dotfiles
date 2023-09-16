@@ -27,7 +27,7 @@
                     },
                     "5": {
                         "icon": "/opt/Moneydance/resources/moneydance_icon512.png",
-                        "command": "moneydance"
+                        "command": "/bin/sh \"/opt/Moneydance/Moneydance\""
                     },
                     "6": {
                         "icon": "/home/tmoyer/Pictures/streamdeck/previous-svgrepo-com.svg",
