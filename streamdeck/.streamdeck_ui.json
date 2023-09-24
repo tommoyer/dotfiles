@@ -60,7 +60,10 @@
                         "icon": "/home/tmoyer/Pictures/streamdeck/speaker-svgrepo-com.svg",
                         "keys": "media_volume_up"
                     },
-                    "14": {}
+                    "14": {
+                        "switch_page": 2,
+                        "icon": "/home/tmoyer/Pictures/streamdeck/next.png"
+                    }
                 },
                 "1": {
                     "0": {},
@@ -73,7 +76,10 @@
                     "7": {},
                     "8": {},
                     "9": {},
-                    "10": {},
+                    "10": {
+                        "icon": "/home/tmoyer/Pictures/streamdeck/before.png",
+                        "switch_page": 1
+                    },
                     "11": {},
                     "12": {},
                     "13": {},
@@ -215,7 +221,8 @@
                     "13": {},
                     "14": {}
                 }
-            }
+            },
+            "page": 0
         }
     }
 }
