@@ -9,8 +9,8 @@
                         "command": "xdg-open \"obsidian://advanced-uri?vault=Notes&workspace=main\""
                     },
                     "1": {
-                        "command": "gnome-terminal",
-                        "icon": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Terminal.png"
+                        "command": "/usr/bin/xfce4-terminal",
+                        "icon": "/usr/share/icons/elementary-xfce/apps/64/xfce-terminal.png"
                     },
                     "2": {
                         "command": "google-chrome-stable",
