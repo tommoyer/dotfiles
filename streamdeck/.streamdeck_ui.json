@@ -46,7 +46,9 @@
                         "icon": "/opt/sublime_text/Icon/256x256/sublime-text.png"
                     },
                     "10": {
-                        "keys": ""
+                        "keys": "",
+                        "icon": "/home/tmoyer/Pictures/streamdeck/headphone.png",
+                        "command": "/home/tmoyer/Applications/set-audio.sh"
                     },
                     "11": {
                         "icon": "/home/tmoyer/Pictures/streamdeck/speaker-1-svgrepo-com.svg",
