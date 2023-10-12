@@ -262,6 +262,8 @@ gpgconf --launch gpg-agent
 export DEBFULLNAME="Tom Moyer"
 export DEBEMAIL="tom.moyer@canonical.com"
 
+export GH_TOKEN=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
+
 #--------------------------------
 # system-specific customizations
 #--------------------------------
