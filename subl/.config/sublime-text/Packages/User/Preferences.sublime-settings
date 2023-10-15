@@ -15,7 +15,6 @@
 			"selector": "text.tex.latex",
 		}
 	],
-	"color_scheme": "Solarized (dark).sublime-color-scheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"font_size": 12,
 	"gutter": true,
@@ -24,7 +23,8 @@
 	],
 	"line_numbers": true,
 	"tab_size": 4,
-	"theme": "Default.sublime-theme",
+	"theme": "gruvbox.sublime-theme",
+    "color_scheme": "Packages/gruvbox/gruvbox (Dark) (Hard).sublime-color-scheme",
 	"translate_tabs_to_spaces": true,
 	/*"ignored_packages": []*/
 }
