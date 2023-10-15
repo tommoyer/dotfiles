@@ -16,6 +16,7 @@
 		}
 	],
 	"dictionary": "Packages/Language - English/en_US.dic",
+	"font_face": "Ubuntu Mono Regular",
 	"font_size": 12,
 	"gutter": true,
 	"ignored_packages":

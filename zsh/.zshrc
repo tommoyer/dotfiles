@@ -263,6 +263,25 @@ export DEBFULLNAME="Tom Moyer"
 export DEBEMAIL="tom.moyer@canonical.com"
 
 export ALIEN_THEME="gruvbox"
+
+export ALIEN_SECTIONS_LEFT=(
+  exit
+  battery
+  user
+  path
+  vcs_branch
+  vcs_status
+  vcs_dirty
+  newline
+  ssh
+  venv
+  prompt
+)
+
+export ALIEN_SECTIONS_RIGHT=(
+  time
+)
+
 source ${HOME}/.alien/alien.zsh
 
 #--------------------------------
