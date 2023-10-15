@@ -262,6 +262,9 @@ gpgconf --launch gpg-agent
 export DEBFULLNAME="Tom Moyer"
 export DEBEMAIL="tom.moyer@canonical.com"
 
+export ALIEN_THEME="gruvbox"
+source ${HOME}/.alien/alien.zsh
+
 #--------------------------------
 # system-specific customizations
 #--------------------------------
