@@ -263,6 +263,7 @@ export DEBFULLNAME="Tom Moyer"
 export DEBEMAIL="tom.moyer@canonical.com"
 
 export ALIEN_THEME="gruvbox"
+export ALIEN_SECTION_USER_HOST=1
 
 export ALIEN_SECTIONS_LEFT=(
   exit
