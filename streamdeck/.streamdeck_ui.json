@@ -9,7 +9,7 @@
                         "command": "xdg-open \"obsidian://advanced-uri?vault=Notes&workspace=main\""
                     },
                     "1": {
-                        "command": "/usr/bin/konsole",
+                        "command": "/usr/bin/gnome-terminal",
                         "icon": "/usr/share/icons/Humanity/apps/64/konsole.svg"
                     },
                     "2": {

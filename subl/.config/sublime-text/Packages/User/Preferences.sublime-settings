@@ -21,8 +21,6 @@
 	"gutter": true,
 	"ignored_packages":
 	[
-		"GitGutter",
-		"MarkdownPreview",
 	],
 	"line_numbers": true,
 	"tab_size": 4,
