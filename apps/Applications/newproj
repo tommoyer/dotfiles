@@ -27,52 +27,29 @@ Files that are created
 
 notes_template = Template('''---
 name: $project
-type: notes
----
-# Tasks
-
-
-''')
-
-dashboard_template = Template('''---
-name: $project
-watson: $project
-tags: project $tags
+type: project $tags
 obsidianUIMode: preview
+tags: $tags
 ---
 
 Status:: $status
 
-# Controls
+# Time Tracking
 
-```meld-build-toolbar
-run = Update Dashboard
+```button
+name Start time $project
+type command
+action Shell Commands: Execute: Start Time
+```
+^button-start-$project
+
+```button
+name Stop time $project
+type command
+action Shell Commands: Execute: Stop Time
 ```
 
-[[./Notes|Open Project Notes]]
-
-`button-start-$project` `button-stop-$project`
-
-# Recent Notes
-
-```js meld-build
-//@hide_when_reading
-const fullText = await $.io.load("Notes.md");
-const headerRegex = /^# .*$/umg;
-const linkTemplate = "![[Notes#{{date0}}]]![[Notes#{{date1}}]]";
-const matches = fullText.match(headerRegex);
-if (matches.length >= 2) {
-    const topMatches = matches.slice(-2);
-    const dates = {date0: topMatches[0].slice(2), date1:topMatches[1].slice(2)};
-    const result = $.render(linkTemplate, dates);
-    $.markers.set( 'recentNotes', result);
-    await $.markers.apply();
-}
-```
-
-%%recentNotes=%%No recent notes%%=recentNotes%%
-
-# Tasks
+# Task Rollup
 
 ## Overdue
 
@@ -113,29 +90,9 @@ done
 folder includes {{query.file.folder}}
 ```
 
-''')
-
-
-helpers_template = Template('''---
-obsidianEditingMode: source
-obsidianUIMode: source
----
-
-```button
-name Start time $project
-type command
-action Shell Commands: Execute: Start Time
-```
-^button-start-$project
-
-```button
-name Stop time $project
-type command
-action Shell Commands: Execute: Stop Time
-```
-^button-stop-$project
 
 ''')
+
 
 datetime_format = '%Y-%m-%d %H:%M'
 date_format = '%Y-%m-%d'
@@ -190,21 +147,11 @@ def main():
     project_folder.mkdir()
 
     note_path = project_folder.joinpath('Notes.md')
-    dashboard_path = project_folder.joinpath('Dashboard.md')
-    helpers_path = project_folder.joinpath('_helpers.md')
 
-    note = notes_template.substitute(project=project)
-    helpers = helpers_template.substitute(project=project)
-    dashboard = dashboard_template.substitute(project=project, status=status, tags=tags)
+    note = notes_template.substitute(project=project, tags=tags)
 
     with open(note_path, 'x') as f:
         f.write(note)
-
-    with open(dashboard_path, 'x') as f:
-        f.write(dashboard)
-
-    with open(helpers_path, 'x') as f:
-        f.write(helpers)
 
     print(f'Created a new project at {project_folder}')
 
