@@ -2,39 +2,138 @@
 
 '''
 Inputs:
- - Project name - Required
- - Folder (e.g. Core, Teaching, Canonical, etc.) - Optional
+ - Project name - Required (must not have spaces)
+ - Notes root path - Required (config)
 
 Outputs:
- - A folder in ~/Projects/[<Folder>]/<Name>
- - A note in ~/Notes/Projects/[<Folder>]/Name.md with a template
+ - A note folder
 '''
 
 import click
 import sys
+import readline
+import re
 
 from datetime import datetime
 from string import Template
 from pathlib import Path
 
-notes_directory = Path('~/Notes/Projects/')
-projects_directory = Path('~/Projects/')
 
-note_template = Template('''
+'''
+Files that are created
+ - Directory: <root path>/<project-name>
+ - File: <root path>/<project-name>/Dashboard.md
+ - File: <root path>/<project-name>/_helpers.md
+ - File: <root path>/<project-name>/Notes.md
+'''
+
+notes_template = Template('''---
+name: $project
+type: notes
 ---
-creation date: $date_time
-tags: Project $name $folder$year
-keys: $keys
+# Tasks
+
+
+''')
+
+dashboard_template = Template('''---
+name: $project
+watson: $project
+tags: project $tags
+obsidianUIMode: preview
 ---
 
 Status:: $status
 
-# Project Notes
+# Controls
 
-## $date
+```meld-build-toolbar
+run = Update Dashboard
+```
 
-## Tasks
-- [ ] 
+[[./Notes|Open Project Notes]]
+
+`button-start-$project` `button-stop-$project`
+
+# Recent Notes
+
+```js meld-build
+//@hide_when_reading
+const fullText = await $$.io.load("Notes.md");
+const headerRegex = /^# .*$$/umg;
+const linkTemplate = "![[Notes#{{date0}}]]\n![[Notes#{{date1}}]]";
+const matches = fullText.match(headerRegex);
+const topMatches = matches.slice(-2);
+const dates = {date0: topMatches[0].slice(2), date1:topMatches[1].slice(2)};
+const result = $$.render(linkTemplate, dates);
+$$.markers.set( 'recentNotes', result);
+await $$.markers.apply();
+```
+
+%%recentNotes=%%No recent notes%%=recentNotes%%
+
+# Tasks
+
+## Overdue
+
+```tasks
+due before today
+not done
+folder includes {{query.file.folder}}
+```
+
+## Due Today
+
+```tasks
+due today
+not done
+folder includes {{query.file.folder}}
+```
+
+## Due Tomorrow
+
+```tasks
+due tomorrow
+not done
+folder includes {{query.file.folder}}
+```
+
+## No Due Date
+
+```tasks
+no due date
+not done
+folder includes {{query.file.folder}}
+```
+
+## Done
+
+```tasks
+done
+folder includes {{query.file.folder}}
+```
+
+''')
+
+
+helpers_template = Template('''---
+obsidianEditingMode: source
+obsidianUIMode: source
+---
+
+```button
+name Start time $project
+type command
+action Shell Commands: Execute: Start Time
+```
+^button-start-$project
+
+```button
+name Stop time $project
+type command
+action Shell Commands: Execute: Stop Time
+```
+^button-stop-$project
 
 ''')
 
@@ -42,49 +141,72 @@ datetime_format = '%Y-%m-%d %H:%M'
 date_format = '%Y-%m-%d'
 year_format = '%Y'
 status_choices = click.Choice(['pending', 'in-progress', 'dropped', 'done', 'long-term', 'waiting'])
+valid_name_regex = re.compile(r'^[\w-]*$')
+
+
+def get_valid_folder():
+    readline.set_completer_delims('\t\n=')
+    readline.parse_and_bind("tab: complete")
+    option = input("Enter parent path for new project folder: ")
+    path = Path(option).expanduser()
+
+    while True:
+        if path.is_dir():
+            break
+        else:
+            if click.confirm(f'{path} does not exist. Create it?'):
+                path.mkdir(parents=True, exist_ok=True)
+                break
+            else:
+                option = input("Enter parent path for new project folder: ")
+                path = Path(option).expanduser()
+                continue
+
+    return path
+
+
+def get_valid_name():
+    while True:
+        name = click.prompt('Please provide a name for the project', type=str)
+        if valid_name_regex.match(name):
+            return name
+        else:
+            print('Invalid name. Names can only contain alphanumeric characters and - and _')
 
 
 def main():
-    current_date = datetime.today()
-    project_name = click.prompt('Please provide a name for the project', type=str)
-    project_folder = click.prompt('Please provide a folder name (empty if not needed)', type=str, default='')
+    project = get_valid_name()
+    print(f'Got {project} as the project name')
+
+    path = get_valid_folder()
+    print(f'Got {path} as the parent path for the project')
+
     status = click.prompt('Current status', type=status_choices)
-    keys = click.prompt('Comma separated list of keywords', type=str)
+    print(f'Got {status} as the project status')
 
-    note = note_template.substitute(name=project_name,
-                                    folder=f'{project_folder} 'if project_folder != '' else '',
-                                    year=current_date.strftime(year_format),
-                                    date_time=current_date.strftime(datetime_format),
-                                    date=current_date.strftime(date_format),
-                                    status=status,
-                                    keys=keys)
+    tags = click.prompt('Tags, space separated', type=str, default='')
 
-    note_path = notes_directory.joinpath(project_folder).joinpath(f'{project_name}.md').expanduser()
-    project_path = projects_directory.joinpath(project_folder).joinpath(project_name).expanduser()
+    project_folder = path.joinpath(project)
+    project_folder.mkdir()
 
-    # If note folder doesn't exist prompt to create
-    if not note_path.parent.exists():
-        if click.confirm(f'{note_path.parent} does not exist. Create it?'):
-            note_path.parent.mkdir(parents=True, exist_ok=True)
-        else:
-            print('Cannot create the necessary folders. Exiting...')
-            sys.exit(-1)
+    note_path = project_folder.joinpath('Notes.md')
+    dashboard_path = project_folder.joinpath('Dashboard.md')
+    helpers_path = project_folder.joinpath('_helpers.md')
 
-    # If project folder doesn't exist prompt to create
-    if not project_path.parent.exists():
-        if click.confirm(f'{project_path.parent} does not exist. Create it?'):
-            project_path.parent.mkdir(parents=True, exist_ok=True)
-        else:
-            print('Cannot create the necessary folders. Exiting...')
-            sys.exit(-1)
+    note = notes_template.substitute(project=project)
+    helpers = helpers_template.substitute(project=project)
+    dashboard = dashboard_template.substitute(project=project, status=status, tags=tags)
 
     with open(note_path, 'x') as f:
         f.write(note)
 
-    project_path.mkdir()
+    with open(dashboard_path, 'x') as f:
+        f.write(dashboard)
 
-    print(f'Created a project note at {note_path}')
-    print(f'Created a project folder at {project_path}')
+    with open(helpers_path, 'x') as f:
+        f.write(helpers)
+
+    print(f'Created a new project at {project_folder}')
 
 
 if __name__ == '__main__':
