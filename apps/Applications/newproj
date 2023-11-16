@@ -57,15 +57,17 @@ run = Update Dashboard
 
 ```js meld-build
 //@hide_when_reading
-const fullText = await $$.io.load("Notes.md");
-const headerRegex = /^# .*$$/umg;
-const linkTemplate = "![[Notes#{{date0}}]]\n![[Notes#{{date1}}]]";
+const fullText = await $.io.load("Notes.md");
+const headerRegex = /^# .*$/umg;
+const linkTemplate = "![[Notes#{{date0}}]]![[Notes#{{date1}}]]";
 const matches = fullText.match(headerRegex);
-const topMatches = matches.slice(-2);
-const dates = {date0: topMatches[0].slice(2), date1:topMatches[1].slice(2)};
-const result = $$.render(linkTemplate, dates);
-$$.markers.set( 'recentNotes', result);
-await $$.markers.apply();
+if (matches.length >= 2) {
+    const topMatches = matches.slice(-2);
+    const dates = {date0: topMatches[0].slice(2), date1:topMatches[1].slice(2)};
+    const result = $.render(linkTemplate, dates);
+    $.markers.set( 'recentNotes', result);
+    await $.markers.apply();
+}
 ```
 
 %%recentNotes=%%No recent notes%%=recentNotes%%
