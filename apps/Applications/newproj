@@ -10,11 +10,9 @@ Outputs:
 '''
 
 import click
-import sys
 import readline
 import re
 
-from datetime import datetime
 from string import Template
 from pathlib import Path
 
@@ -140,8 +138,8 @@ action Shell Commands: Execute: Stop Time
 datetime_format = '%Y-%m-%d %H:%M'
 date_format = '%Y-%m-%d'
 year_format = '%Y'
-status_choices = click.Choice(['pending', 'in-progress', 'dropped', 'done', 'long-term', 'waiting'])
 valid_name_regex = re.compile(r'^[\w-]*$')
+status_choices = click.Choice(['pending', 'in-progress', 'dropped', 'done', 'long-term', 'waiting'])
 
 
 def get_valid_folder():
