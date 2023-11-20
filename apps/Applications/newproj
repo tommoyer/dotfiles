@@ -143,17 +143,14 @@ def main():
 
     tags = click.prompt('Tags, space separated', type=str, default='')
 
-    project_folder = path.joinpath(project)
-    project_folder.mkdir()
+    note_path = path.joinpath(f'{project}.md')
 
-    note_path = project_folder.joinpath('Notes.md')
-
-    note = notes_template.substitute(project=project, tags=tags)
+    note = notes_template.substitute(project=project, tags=tags, status=status)
 
     with open(note_path, 'x') as f:
         f.write(note)
 
-    print(f'Created a new project at {project_folder}')
+    print(f'Created a new project at {path}')
 
 
 if __name__ == '__main__':
