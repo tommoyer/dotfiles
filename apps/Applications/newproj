@@ -56,7 +56,7 @@ action Shell Commands: Execute: Stop Time
 ```tasks
 due before today
 not done
-folder includes {{query.file.folder}}
+folder includes {{query.file.path}}
 ```
 
 ## Due Today
@@ -64,7 +64,7 @@ folder includes {{query.file.folder}}
 ```tasks
 due today
 not done
-folder includes {{query.file.folder}}
+folder includes {{query.file.path}}
 ```
 
 ## Due Tomorrow
@@ -72,7 +72,7 @@ folder includes {{query.file.folder}}
 ```tasks
 due tomorrow
 not done
-folder includes {{query.file.folder}}
+folder includes {{query.file.path}}
 ```
 
 ## No Due Date
@@ -80,14 +80,14 @@ folder includes {{query.file.folder}}
 ```tasks
 no due date
 not done
-folder includes {{query.file.folder}}
+folder includes {{query.file.path}}
 ```
 
 ## Done
 
 ```tasks
 done
-folder includes {{query.file.folder}}
+folder includes {{query.file.path}}
 ```
 
 
