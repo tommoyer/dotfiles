@@ -29,7 +29,7 @@ notes_template = Template('''---
 name: $project
 type: project $tags
 obsidianUIMode: preview
-tags: $tags
+tags: project $tags
 ---
 
 Status:: $status
@@ -41,7 +41,6 @@ name Start time $project
 type command
 action Shell Commands: Execute: Start Time
 ```
-^button-start-$project
 
 ```button
 name Stop time $project
