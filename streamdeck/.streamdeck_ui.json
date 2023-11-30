@@ -68,7 +68,10 @@
                     }
                 },
                 "1": {
-                    "0": {},
+                    "0": {
+                        "icon": "/home/tmoyer/Pictures/streamdeck/pihole.png",
+                        "command": "/home/tmoyer/Applications/disable-pihole.sh"
+                    },
                     "1": {},
                     "2": {},
                     "3": {},
