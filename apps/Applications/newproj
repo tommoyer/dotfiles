@@ -27,26 +27,10 @@ Files that are created
 
 notes_template = Template('''---
 name: $project
-type: project $tags
-obsidianUIMode: preview
+type: project
 tags: project $tags
 ---
-
 Status:: $status
-
-# Time Tracking
-
-```button
-name Start time $project
-type command
-action Shell Commands: Execute: Start Time
-```
-
-```button
-name Stop time $project
-type command
-action Shell Commands: Execute: Stop Time
-```
 
 # Task Rollup
 
