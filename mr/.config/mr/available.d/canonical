@@ -2,3 +2,11 @@
 [Repos/canonical/seg-internal-tools]
 checkout = git clone 'git@github.com:canonical/seg-internal-tools.git' 'seg-internal-tools'
 skip = [ "$1" = push ]
+
+[Repos/canonical/kteam-tools]
+checkout = git clone https://kernel.ubuntu.com/gitea/kernel/kernel-versions.git ~/Repos/canonical/kteam-tools
+skip = [ "$1" = push ]
+
+[Repos/canonical/kernel-versions]
+checkout = git clone https://kernel.ubuntu.com/gitea/kernel/kernel-versions.git ~/Repos/canonical/kernel-versions
+skip = [ "$1" = push ]
