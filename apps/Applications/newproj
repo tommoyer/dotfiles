@@ -12,6 +12,7 @@ Outputs:
 import click
 import readline
 import re
+import datetime
 
 from string import Template
 from pathlib import Path
@@ -73,6 +74,9 @@ done
 folder includes {{query.file.path}}
 ```
 
+# Notes
+
+## $date
 
 ''')
 
@@ -128,7 +132,7 @@ def main():
 
     note_path = path.joinpath(f'{project}.md')
 
-    note = notes_template.substitute(project=project, tags=tags, status=status)
+    note = notes_template.substitute(project=project, tags=tags, status=status, date=datetime.date.today().strftime(date_format))
 
     with open(note_path, 'x') as f:
         f.write(note)
