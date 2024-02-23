@@ -1,6 +1,6 @@
 
-[$HOME/.dotfiles]
-checkout = git clone git@github.com:tommoyer/dotfiles.git ~/.dotfiles
+[$HOME/Repos/tommoyer/www-academic]
+checkout = git clone git@github.com:tommoyer/www-academic.git ~/Repos/tommoyer/www-academic
 
 [$HOME/Repos/tommoyer/www]
 checkout = git clone git@github.com:tommoyer/www.git ~/Repos/tommoyer/www
@@ -11,12 +11,18 @@ checkout = git clone git@github.com:tommoyer/Watson.git ~/Repos/tommoyer/Watson
 [$HOME/Repos/tommoyer/watson2sf]
 checkout = git clone git@github.com:tommoyer/watson2sf.git ~/Repos/tommoyer/watson2sf
 
-[$HOME/Repos/tommoyer/itis-vm-repl]
-checkout = git clone git@github.com:tommoyer/itis-vm-repl.git ~/Repos/tommoyer/itis-vm-repl
+[$HOME/Repos/tommoyer/infra]
+checkout = git clone git@github.com:tommoyer/infra.git ~/Repos/tommoyer/infra
 
-[$HOME/Repos/tommoyer/timekpr-next]
-checkout = git clone git@github.com:tommoyer/timekpr-next.git ~/Repos/tommoyer/timekpr-next
+[$HOME/Repos/tommoyer/cases]
+checkout = git clone git@github.com:tommoyer/cases.git ~/Repos/tommoyer/cases
 
-[$HOME/Repos/tommoyer/packrat]
-checkout = git clone git@github.com:tommoyer/packrat.git ~/Repos/tommoyer/packrat
-
+# [$HOME/Repos/tommoyer/itis-vm-repl]
+# checkout = git clone git@github.com:tommoyer/itis-vm-repl.git ~/Repos/tommoyer/itis-vm-repl
+# 
+# [$HOME/Repos/tommoyer/timekpr-next]
+# checkout = git clone git@github.com:tommoyer/timekpr-next.git ~/Repos/tommoyer/timekpr-next
+# 
+# [$HOME/Repos/tommoyer/packrat]
+# checkout = git clone git@github.com:tommoyer/packrat.git ~/Repos/tommoyer/packrat
+# 
