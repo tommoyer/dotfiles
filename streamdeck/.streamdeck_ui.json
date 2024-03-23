@@ -227,7 +227,10 @@
                     "14": {}
                 }
             },
-            "page": 0
+            "page": 0,
+            "display_timeout": 60,
+            "brightness": 99,
+            "brightness_dimmed": 46
         }
     }
 }

@@ -1,9 +1,4 @@
-~/Repos/tfjmp/.mrconfig
-~/Repos/tmoyer2/.mrconfig
-~/Repos/TJAndHisStudents/.mrconfig
-~/Repos/crest-lab/.mrconfig
-~/Repos/uf_sensei/.mrconfig
-~/Repos/sts-lab/.mrconfig
-~/Repos/iitdbgroup/.mrconfig
-~/Repos/tommoyer/.mrconfig
-~/Repos/camflow/.mrconfig
+/home/tmoyer/.config/mr/available.d/personal
+/home/tmoyer/.config/mr/available.d/provenance
+/home/tmoyer/.config/mr/available.d/uncc
+/home/tmoyer/.config/mr/available.d/canonical
