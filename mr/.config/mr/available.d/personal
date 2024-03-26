@@ -26,3 +26,9 @@ checkout = git clone git@github.com:tommoyer/cases.git ~/Repos/tommoyer/cases
 # [$HOME/Repos/tommoyer/packrat]
 # checkout = git clone git@github.com:tommoyer/packrat.git ~/Repos/tommoyer/packrat
 # 
+
+[/home/tmoyer/Repos/tommoyer/prints]
+checkout = git clone 'git@github.com:tommoyer/prints.git' '~/Repos/tommoyer/prints'
+
+[/home/tmoyer/Repos/tommoyer/class-ansible]
+checkout = git clone 'git@github.com:tommoyer/class-ansible.git' '~/Repos/tommoyer/class-ansible'

@@ -258,6 +258,10 @@ export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 gpgconf --launch gpg-agent
 
+# golang stuff
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # Debian packaging variables
 export DEBFULLNAME="Tom Moyer"
 export DEBEMAIL="tom.moyer@canonical.com"
