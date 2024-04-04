@@ -5,9 +5,11 @@ mimeinfo.cache
 mimeapps.list
 ssh/.ssh/known_hosts
 ssh/.ssh/known_hosts.old
+ssh/.ssh/ansible*
 subl/.config/sublime-text/Installed Packages
 subl/.config/sublime-text/Local
 subl/.config/sublime-text/Packages
 apps/Applications/TickTick-linux-x64/
 apps/Applications/*.log
 apps/Applications/*.AppImage
+

@@ -31,6 +31,10 @@ skip = [ "$1" = push ]
 checkout = git clone --recurse-submodules https://github.com/eendroroy/alien.git $HOME/.alien
 skip = [ "$1" = push ]
 
+[$HOME/.zsh-bash-completions-fallback]
+checkout =  git clone https://github.com/3v1n0/zsh-bash-completions-fallback $HOME/.zsh-bash-completions-fallback
+skip = [ "$1" = push ]
+
 # [$HOME/.apps/git-latexdiff]
 # checkout = git clone https://gitlab.com/git-latexdiff/git-latexdiff.git $HOME/.apps/git-latexdiff
 # skip = [ "$1" = push ]

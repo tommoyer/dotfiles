@@ -11,8 +11,8 @@ checkout = git clone git@github.com:tommoyer/Watson.git ~/Repos/tommoyer/Watson
 [$HOME/Repos/tommoyer/watson2sf]
 checkout = git clone git@github.com:tommoyer/watson2sf.git ~/Repos/tommoyer/watson2sf
 
-[$HOME/Repos/tommoyer/infra]
-checkout = git clone git@github.com:tommoyer/infra.git ~/Repos/tommoyer/infra
+[$HOME/Repos/tommoyer/ansible]
+checkout = git clone git@github.com:tommoyer/ansible.git ~/Repos/tommoyer/ansible
 
 [$HOME/Repos/tommoyer/cases]
 checkout = git clone git@github.com:tommoyer/cases.git ~/Repos/tommoyer/cases

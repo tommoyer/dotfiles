@@ -289,6 +289,11 @@ export ALIEN_SECTIONS_RIGHT=(
 
 source ${HOME}/.alien/alien.zsh
 
+# Pull in bash completions
+autoload -U +X bashcompinit && bashcompinit
+
+source_if_exists $HOME/.zsh-bash-completions-fallback/zsh-bash-completions-fallback.plugin.zsh
+
 #--------------------------------
 # system-specific customizations
 #--------------------------------
