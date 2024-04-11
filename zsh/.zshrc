@@ -294,6 +294,8 @@ autoload -U +X bashcompinit && bashcompinit
 
 source_if_exists $HOME/.zsh-bash-completions-fallback/zsh-bash-completions-fallback.plugin.zsh
 
+fpath=(~/.config/zsh-completions $fpath)
+
 #--------------------------------
 # system-specific customizations
 #--------------------------------
