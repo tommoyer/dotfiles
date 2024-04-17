@@ -11,24 +11,20 @@ checkout = git clone git@github.com:tommoyer/Watson.git ~/Repos/tommoyer/Watson
 [$HOME/Repos/tommoyer/watson2sf]
 checkout = git clone git@github.com:tommoyer/watson2sf.git ~/Repos/tommoyer/watson2sf
 
+[$HOME/Repos/tommoyer/watson-tray]
+checkout = git clone git@github.com:tommoyer/watson-tray.git ~/Repos/tommoyer/watson-tray
+
 [$HOME/Repos/tommoyer/ansible]
 checkout = git clone git@github.com:tommoyer/ansible.git ~/Repos/tommoyer/ansible
 
 [$HOME/Repos/tommoyer/cases]
 checkout = git clone git@github.com:tommoyer/cases.git ~/Repos/tommoyer/cases
 
-# [$HOME/Repos/tommoyer/itis-vm-repl]
-# checkout = git clone git@github.com:tommoyer/itis-vm-repl.git ~/Repos/tommoyer/itis-vm-repl
-# 
-# [$HOME/Repos/tommoyer/timekpr-next]
-# checkout = git clone git@github.com:tommoyer/timekpr-next.git ~/Repos/tommoyer/timekpr-next
-# 
-# [$HOME/Repos/tommoyer/packrat]
-# checkout = git clone git@github.com:tommoyer/packrat.git ~/Repos/tommoyer/packrat
-# 
-
 [/home/tmoyer/Repos/tommoyer/prints]
 checkout = git clone 'git@github.com:tommoyer/prints.git' '~/Repos/tommoyer/prints'
 
-[/home/tmoyer/Repos/tommoyer/class-ansible]
-checkout = git clone 'git@github.com:tommoyer/class-ansible.git' '~/Repos/tommoyer/class-ansible'
+# [/home/tmoyer/Repos/tommoyer/class-ansible]
+# checkout = git clone 'git@github.com:tommoyer/class-ansible.git' '~/Repos/tommoyer/class-ansible'
+
+[$HOME/Repos/tommoyer/luadns]
+checkout = git clone git@github.com:tommoyer/luadns.git ~/Repos/tommoyer/luadns
