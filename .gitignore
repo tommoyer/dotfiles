@@ -4,7 +4,7 @@ subl/Library/Application Support/Sublime Text 3/Local/Session.sublime_session
 mimeinfo.cache
 mimeapps.list
 ssh/.ssh/known_hosts
-ssh/.ssh/known_hosts.old
+ssh/.ssh/*.old
 ssh/.ssh/ansible*
 subl/.config/sublime-text/Installed Packages
 subl/.config/sublime-text/Local
