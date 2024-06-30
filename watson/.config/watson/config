@@ -5,12 +5,11 @@ log_current = true
 report_current = true
 
 [default_tags]
-team = 00250444
+team = 00388739
 education = 00250460
-internal = 00255865
 lws = 00255868
 off = 00250459
 sprint = 00250457
-kbs = 00255867
-docs = 00250453
-tooling = 00255872
+internal = 00255867
+docs = 00255872
+tooling = 00388741
