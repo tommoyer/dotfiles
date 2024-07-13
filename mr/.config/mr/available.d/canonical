@@ -10,3 +10,11 @@ skip = [ "$1" = push ]
 [Repos/canonical/kernel-versions]
 checkout = git clone https://kernel.ubuntu.com/gitea/kernel/kernel-versions.git ~/Repos/canonical/kernel-versions
 skip = [ "$1" = push ]
+
+[Repos/canonical/maas]
+checkout = git clone https://github.com/canonical/maas.git ~/Repos/canonical/maas
+skip = [ "$1" = push ]
+
+[Repos/canonical/lxd]
+checkout = git clone https://github.com/canonical/lxd.git ~/Repos/canonical/lxd
+skip = [ "$1" = push ]

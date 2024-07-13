@@ -7,9 +7,10 @@ report_current = true
 [default_tags]
 team = 00388739
 education = 00250460
-lws = 00255868
 off = 00250459
 sprint = 00250457
 internal = 00255867
 docs = 00255872
 tooling = 00388741
+
+lws = 00388846

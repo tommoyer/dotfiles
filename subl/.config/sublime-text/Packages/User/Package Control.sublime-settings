@@ -2,7 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"Package Control",
 	],
 	"installed_packages":
 	[
@@ -22,6 +21,7 @@
 		"SideBarEnhancements",
 		"SmartMarkdown",
 		"Solarized Color Scheme",
+		"Terraform",
 		"TOML",
 		"WordingStatus",
 	],

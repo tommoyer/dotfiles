@@ -21,13 +21,12 @@
 	"gutter": true,
 	"ignored_packages":
 	[
-		"Package Control",
 	],
 	"line_numbers": true,
 	"tab_size": 4,
-	"theme": "gruvbox.sublime-theme",
+	"theme": "Default.sublime-theme",
     "color_scheme": "gruvbox (Dark) (Hard).sublime-color-scheme",
 	"translate_tabs_to_spaces": true,
 	/*"ignored_packages": []*/
-	"index_files": false,
+	"index_files": true,
 }
