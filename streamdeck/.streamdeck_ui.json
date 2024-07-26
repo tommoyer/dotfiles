@@ -5,7 +5,7 @@
             "buttons": {
                 "0": {
                     "0": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/2023_Obsidian_logo.svg.png",
+                        "icon": "/home/tom-tom/Pictures/streamdeck/2023_Obsidian_logo.svg.png",
                         "command": "xdg-open \"obsidian://advanced-uri?vault=Notes&workspace=main\""
                     },
                     "1": {
@@ -18,27 +18,27 @@
                         "text": ""
                     },
                     "3": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/cooling-fan_9153825.png",
-                        "command": "/home/tmoyer/Applications/toggle-fan.sh"
+                        "icon": "/home/tom-tom/Pictures/streamdeck/cooling-fan_9153825.png",
+                        "command": "/home/tom-tom/Applications/toggle-fan.sh"
                     },
                     "4": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/light-bulb_2988036.png",
-                        "command": "/home/tmoyer/Applications/toggle-light.sh"
+                        "icon": "/home/tom-tom/Pictures/streamdeck/light-bulb_2988036.png",
+                        "command": "/home/tom-tom/Applications/toggle-light.sh"
                     },
                     "5": {
                         "icon": "/opt/Moneydance/resources/moneydance_icon512.png",
                         "command": "/bin/sh \"/opt/Moneydance/Moneydance\""
                     },
                     "6": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/previous-svgrepo-com.svg",
+                        "icon": "/home/tom-tom/Pictures/streamdeck/previous-svgrepo-com.svg",
                         "keys": "media_previous"
                     },
                     "7": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/video-play-pause-svgrepo-com.svg",
+                        "icon": "/home/tom-tom/Pictures/streamdeck/video-play-pause-svgrepo-com.svg",
                         "keys": "media_play_pause"
                     },
                     "8": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/next-svgrepo-com.svg",
+                        "icon": "/home/tom-tom/Pictures/streamdeck/next-svgrepo-com.svg",
                         "keys": "media_next"
                     },
                     "9": {
@@ -47,30 +47,30 @@
                     },
                     "10": {
                         "keys": "",
-                        "icon": "/home/tmoyer/Pictures/streamdeck/headphone.png",
-                        "command": "/home/tmoyer/Applications/set-audio.sh"
+                        "icon": "/home/tom-tom/Pictures/streamdeck/headphone.png",
+                        "command": "/home/tom-tom/Applications/set-audio.sh"
                     },
                     "11": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/speaker-1-svgrepo-com.svg",
+                        "icon": "/home/tom-tom/Pictures/streamdeck/speaker-1-svgrepo-com.svg",
                         "keys": "media_volume_down"
                     },
                     "12": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/speaker-none-svgrepo-com.svg",
+                        "icon": "/home/tom-tom/Pictures/streamdeck/speaker-none-svgrepo-com.svg",
                         "keys": "media_volume_mute"
                     },
                     "13": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/speaker-svgrepo-com.svg",
+                        "icon": "/home/tom-tom/Pictures/streamdeck/speaker-svgrepo-com.svg",
                         "keys": "media_volume_up"
                     },
                     "14": {
                         "switch_page": 2,
-                        "icon": "/home/tmoyer/Pictures/streamdeck/next.png"
+                        "icon": "/home/tom-tom/Pictures/streamdeck/next.png"
                     }
                 },
                 "1": {
                     "0": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/pihole.png",
-                        "command": "/home/tmoyer/Applications/disable-pihole.sh"
+                        "icon": "/home/tom-tom/Pictures/streamdeck/pihole.png",
+                        "command": "/home/tom-tom/Applications/disable-pihole.sh"
                     },
                     "1": {},
                     "2": {},
@@ -82,7 +82,7 @@
                     "8": {},
                     "9": {},
                     "10": {
-                        "icon": "/home/tmoyer/Pictures/streamdeck/before.png",
+                        "icon": "/home/tom-tom/Pictures/streamdeck/before.png",
                         "switch_page": 1
                     },
                     "11": {},
