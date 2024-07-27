@@ -1,6 +1,6 @@
 #!/bin/bash
 
-kasa_cmd=/home/tmoyer/.local/bin/kasa
+kasa_cmd=${HOME}/.local/bin/kasa
 fan_hostname=desk-fan.internal.moyer.wtf
 
 fan_state=$(${kasa_cmd} --host ${fan_hostname} --type plug --json state | jq '.system.get_sysinfo.relay_state')
