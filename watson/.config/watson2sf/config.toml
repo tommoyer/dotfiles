@@ -1,0 +1,9 @@
+
+[watson2sf]
+template = '/home/tom-tom/.config/watson2sf/new-timecards.side'
+
+[user]
+name = 'Tom Moyer'
+
+[ignore]
+tags = ['ignore']
