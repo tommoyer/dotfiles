@@ -1,0 +1,20 @@
+# Set default values for all following accounts.
+defaults
+auth           on
+tls            on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+logfile        ~/.msmtp.log
+
+# account at Google with oauth2 access                                    
+account gmail
+from tommoyer@gmail.com
+user tommoyer@gmail.com
+auth oauthbearer
+passwordeval oama access tommoyer@gmail.com
+host smtp.gmail.com
+port 587
+tls on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+
+account default: gmail
+
