@@ -13,3 +13,4 @@ apps/Applications/TickTick-linux-x64/
 apps/Applications/*.log
 apps/Applications/*.AppImage
 apps/Applications/oama
+apps/Applications/xremap
