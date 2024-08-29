@@ -18,3 +18,9 @@ skip = [ "$1" = push ]
 [Repos/canonical/lxd]
 checkout = git clone https://github.com/canonical/lxd.git ~/Repos/canonical/lxd
 skip = [ "$1" = push ]
+
+[Repos/canonical/se-support-reproducer-templates]
+checkout = git clone 'git@github.com:canonical/se-support-reproducer-templates.git' 'se-support-reproducer-templates'
+
+[Repos/canonical/lws-pb-tracker]
+checkout = git clone 'git@github.com:canonical/lws-pb-tracker.git' 'lws-pb-tracker'
