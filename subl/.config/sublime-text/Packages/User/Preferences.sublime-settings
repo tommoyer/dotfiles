@@ -19,8 +19,7 @@
 	"font_face": "Ubuntu Mono Regular",
 	"font_size": 12,
 	"gutter": true,
-	"ignored_packages":
-	[
+	"ignored_packages": [
 	],
 	"line_numbers": true,
 	"tab_size": 4,
@@ -29,4 +28,5 @@
 	"translate_tabs_to_spaces": true,
 	/*"ignored_packages": []*/
 	"index_files": true,
+	"update_check": false,
 }
