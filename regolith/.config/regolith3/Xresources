@@ -1,0 +1,6 @@
+!regolith.look.path: /usr/share/regolith-look/nord
+regolith.look.path: /usr/share/regolith-look/gruvbox
+regolith.wallpaper.file: /usr/share/backgrounds/warty-final-ubuntu.png
+#define gtk_font_name Ubuntu Regular 12
+#define gtk_document_font_name Sans Regular 12
+#define gtk_monospace_font_name Ubuntu Mono Regular 12
