@@ -24,3 +24,24 @@ checkout = git clone 'git@github.com:canonical/se-support-reproducer-templates.g
 
 [Repos/canonical/lws-pb-tracker]
 checkout = git clone 'git@github.com:canonical/lws-pb-tracker.git' 'lws-pb-tracker'
+skip = [ "$1" = push ]
+
+[Repos/canonical/microcloud]
+checkout = git clone 'git@github.com:canonical/microcloud.git' 'microcloud'
+skip = [ "$1" = push ]
+
+[Repos/canonical/kernel-snaps-u24.04]
+checkout = git clone 'https://git.launchpad.net/~canonical-kernel-snaps/canonical-kernel-snaps/+git/kernel-snaps-u24.04' 'kernel-snaps-u24.04'
+skip = [ "$1" = push ]
+
+[Repos/canonical/noble]
+checkout = git clone 'https://git.launchpad.net/~ubuntu-kernel/ubuntu/+source/linux/+git/noble' 'noble'
+skip = [ "$1" = push ]
+
+[Repos/canonical/canonical-kernel-snaps]
+checkout = git clone 'https://git.launchpad.net/canonical-kernel-snaps' 'canonical-kernel-snaps'
+skip = [ "$1" = push ]
+
+[Repos/canonical/se-cloud-tools]
+checkout = git clone git@github.com:canonical/se-cloud-tools.git se-cloud-tools
+skip = [ "$1" = push ]
