@@ -14,3 +14,4 @@ apps/Applications/*.log
 apps/Applications/*.AppImage
 apps/Applications/oama
 apps/Applications/xremap
+apps/Applications/gh
