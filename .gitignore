@@ -1,17 +1,18 @@
-mr/.config/mr/config.d
+apps/Applications/*.AppImage
+apps/Applications/gh
+apps/Applications/*.log
+apps/Applications/oama
+apps/Applications/TickTick-linux-x64/
+apps/Applications/xremap
 apps/Applications/yubikey-manager-qt-1.2.4b-linux.AppImage
-subl/Library/Application Support/Sublime Text 3/Local/Session.sublime_session
-mimeinfo.cache
+mail/.config/offlineimap/config
 mimeapps.list
+mimeinfo.cache
+mr/.config/mr/config.d
+ssh/.ssh/ansible*
 ssh/.ssh/known_hosts
 ssh/.ssh/*.old
-ssh/.ssh/ansible*
 subl/.config/sublime-text/Installed Packages
 subl/.config/sublime-text/Local
 subl/.config/sublime-text/Packages
-apps/Applications/TickTick-linux-x64/
-apps/Applications/*.log
-apps/Applications/*.AppImage
-apps/Applications/oama
-apps/Applications/xremap
-apps/Applications/gh
+subl/Library/Application Support/Sublime Text 3/Local/Session.sublime_session
