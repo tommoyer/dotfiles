@@ -5,20 +5,20 @@ checkout = git clone git@github.com:tommoyer/www-academic.git ~/Repos/tommoyer/w
 [$HOME/Repos/tommoyer/www]
 checkout = git clone git@github.com:tommoyer/www.git ~/Repos/tommoyer/www
 
-[$HOME/Repos/tommoyer/Watson]
-checkout = git clone git@github.com:tommoyer/Watson.git ~/Repos/tommoyer/Watson
-
-[$HOME/Repos/tommoyer/watson2sf]
-checkout = git clone git@github.com:tommoyer/watson2sf.git ~/Repos/tommoyer/watson2sf
-
-[$HOME/Repos/tommoyer/watson-tray]
-checkout = git clone git@github.com:tommoyer/watson-tray.git ~/Repos/tommoyer/watson-tray
+# [$HOME/Repos/tommoyer/Watson]
+# checkout = git clone git@github.com:tommoyer/Watson.git ~/Repos/tommoyer/Watson
+ 
+# [$HOME/Repos/tommoyer/watson2sf]
+# checkout = git clone git@github.com:tommoyer/watson2sf.git ~/Repos/tommoyer/watson2sf
+ 
+# [$HOME/Repos/tommoyer/watson-tray]
+# checkout = git clone git@github.com:tommoyer/watson-tray.git ~/Repos/tommoyer/watson-tray
 
 [$HOME/Repos/tommoyer/ansible]
 checkout = git clone git@github.com:tommoyer/ansible.git ~/Repos/tommoyer/ansible
 
-[$HOME/Repos/tommoyer/cases]
-checkout = git clone git@github.com:tommoyer/cases.git ~/Repos/tommoyer/cases
+# [$HOME/Repos/tommoyer/cases]
+# checkout = git clone git@github.com:tommoyer/cases.git ~/Repos/tommoyer/cases
 
 [/home/tmoyer/Repos/tommoyer/prints]
 checkout = git clone 'git@github.com:tommoyer/prints.git' '~/Repos/tommoyer/prints'
