@@ -210,6 +210,12 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bindsym $mod+Shift+v exec --no-startup-id /usr/bin/copyq show
+
+for_window [instance="copyq"] floating enable
+for_window [instance="copyq"] resize set 1000 600
+for_window [instance="copyq"] border pixel 5
+
 ######################################
 # color settings for bar and windows #
 ######################################
