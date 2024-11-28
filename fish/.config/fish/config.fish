@@ -97,4 +97,6 @@ set -gx DEBEMAIL "tommoyer@gmail.com"
 #--------------------------------
 source_if_exists ~/.local_profile
 
+set -gx pure_color_mute brcyan
+
 end # is-interactive
