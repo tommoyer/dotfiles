@@ -20,11 +20,11 @@ checkout = git clone git@github.com:tommoyer/ansible.git ~/Repos/tommoyer/ansibl
 # [$HOME/Repos/tommoyer/cases]
 # checkout = git clone git@github.com:tommoyer/cases.git ~/Repos/tommoyer/cases
 
-[/home/tmoyer/Repos/tommoyer/prints]
-checkout = git clone 'git@github.com:tommoyer/prints.git' '~/Repos/tommoyer/prints'
+[$HOME/Repos/tommoyer/prints]
+checkout = git clone git@github.com:tommoyer/prints.git ~/Repos/tommoyer/prints
 
 # [/home/tmoyer/Repos/tommoyer/class-ansible]
-# checkout = git clone 'git@github.com:tommoyer/class-ansible.git' '~/Repos/tommoyer/class-ansible'
+# checkout = git clone git@github.com:tommoyer/class-ansible.git ~/Repos/tommoyer/class-ansible
 
 [$HOME/Repos/tommoyer/luadns]
 checkout = git clone git@github.com:tommoyer/luadns.git ~/Repos/tommoyer/luadns
