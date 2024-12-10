@@ -25,7 +25,7 @@
 # checkout = git clone git@gitlab.com:crest-lab/proposals/nsf-oac-cici.git ~/Repos/crest-lab/proposals/nsf-oac-cici
 
 # [$HOME/Repos/NASCL/CIKM22]
-# checkout = git clone git@github.com:NASCL/CIKM22.git ~/Repos/NASCL/CIKM22
+# checkout = git clone https://github.com/NASCL/CIKM22.git ~/Repos/NASCL/CIKM22
 
 # [$HOME/Repos/tmoyer2/job-search-2022]
 # checkout = git clone git@gitlab.com:tmoyer2/job-search-2022.git ~/Repos/tmoyer2/job-search-2022

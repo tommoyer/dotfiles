@@ -5,11 +5,11 @@ jobs = 1
 include = cat $HOME/.config/mr/config.d/*
 
 [$HOME/.dotfiles]
-checkout = git clone git@github.com:tommoyer/dotfiles.git ${HOME}/.dotfiles
+checkout = git clone https://github.comtommoyer/dotfiles.git ${HOME}/.dotfiles
 order = 1
 
 [$HOME/Repos/tommoyer/ansible]
-checkout = git clone git@github.com:tommoyer/ansible.git ${HOME}/Repos/tommoyer/ansible
+checkout = git clone https://github.comtommoyer/ansible.git ${HOME}/Repos/tommoyer/ansible
 
 # [$HOME/.apps/fzf]
 # checkout = git clone https://github.com/junegunn/fzf.git $HOME/.apps/fzf
