@@ -11,6 +11,9 @@ order = 1
 [$HOME/Repos/tommoyer/ansible]
 checkout = git clone https://github.com/tommoyer/ansible.git ${HOME}/Repos/tommoyer/ansible
 
+[$HOME/Arduino]
+checkout = git clone https://github.com/tommoyer/arduino.git ${HOME}/Arduino
+
 # [$HOME/.apps/fzf]
 # checkout = git clone https://github.com/junegunn/fzf.git $HOME/.apps/fzf
 # skip = [ "$1" = push ]
