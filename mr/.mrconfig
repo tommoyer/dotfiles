@@ -27,6 +27,10 @@ checkout = git clone https://github.com/tommoyer/ansible.git ${HOME}/Repos/tommo
 checkout = git clone https://github.com/so-fancy/diff-so-fancy.git $HOME/.apps/diff-so-fancy
 skip = [ "$1" = push ]
 
+[$HOME/.apps/rofi-power-menu]
+checkout = git clone https://github.com/jluttine/rofi-power-menu $HOME/.apps/rofi-power-menu
+skip = [ "$1" = push ]
+
 # [$HOME/.alien]
 # checkout = git clone --recurse-submodules https://github.com/eendroroy/alien.git $HOME/.alien
 # skip = [ "$1" = push ]

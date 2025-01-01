@@ -17,3 +17,5 @@ subl/.config/sublime-text/Local
 subl/.config/sublime-text/Packages
 subl/Library/Application Support/Sublime Text 3/Local/Session.sublime_session
 __pycache__
+apps/.local/share/applications/chrome-*-Default.desktop
+apps/.local/share/applications/chrome-*-Profile_*.desktop
