@@ -41,8 +41,8 @@ gaps outer 3
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-# exec --no-startup-id dex --autostart --environment i3
-
+exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id ~/.fehbg
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -52,7 +52,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+# exec --no-startup-id nm-tray
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -182,8 +182,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec "mate-session-save --logout-dialog"
-bindsym $mod+Shift+p exec "mate-session-save --shutdown-dialog"
+bindsym $mod+Shift+p exec "rofi -show power-menu -modi power-menu:/home/tom-tom/.apps/rofi-power-menu/rofi-power-menu"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
