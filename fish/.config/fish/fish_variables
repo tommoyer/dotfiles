@@ -1,6 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export SSH_AUTH_SOCK:/home/tom\x2dtom/\x2egnupg/S\x2egpg\x2dagent\x2essh
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
 SETUVAR Z_DATA:/home/tom\x2dtom/\x2elocal/share/z/data
