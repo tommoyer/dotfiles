@@ -8,25 +8,25 @@
 	[
 		{
 			"characters": "<",
-			"selector": "text.html",
+			"selector": "text.html"
 		},
 		{
 			"characters": "\\",
-			"selector": "text.tex.latex",
+			"selector": "text.tex.latex"
 		}
 	],
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).sublime-color-scheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"font_face": "Ubuntu Mono Regular",
 	"font_size": 12,
 	"gutter": true,
-	"ignored_packages": [
+	"ignored_packages":
+	[
 	],
+	"index_files": true,
 	"line_numbers": true,
 	"tab_size": 4,
-	"theme": "Default.sublime-theme",
-    "color_scheme": "gruvbox (Dark) (Hard).sublime-color-scheme",
+	"theme": "Soda SolarizedDark.sublime-theme",
 	"translate_tabs_to_spaces": true,
-	/*"ignored_packages": []*/
-	"index_files": true,
-	"update_check": false,
+	"update_check": false
 }
