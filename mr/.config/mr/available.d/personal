@@ -15,8 +15,8 @@ checkout = git clone https://github.com/tommoyer/luadns.git ${HOME}/Repos/tommoy
 checkout = git clone https://github.com/tommoyer/dotfiles.git ${HOME}/.dotfiles
 order = 1
 
-[${HOME}/Repos/tommoyer/ansible]
-checkout = git clone https://github.com/tommoyer/ansible.git ${HOME}/Repos/tommoyer/ansible
+[${HOME}/Repos/tommoyer/infrastructure]
+checkout = git clone https://github.com/tommoyer/infrastructure.git ${HOME}/Repos/tommoyer/infrastructure
 
 [${HOME}/Arduino]
 checkout = git clone https://github.com/tommoyer/arduino.git ${HOME}/Arduino
