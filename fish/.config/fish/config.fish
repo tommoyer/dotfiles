@@ -51,7 +51,11 @@ alias v=vagrant
 alias chmod='chmod -c'
 alias chown='chown -c'
 alias less='less -F'
-alias subl='flatpak run com.sublimetext.three'
+
+function subl --wraps flatpak --description 'alias subl=flatpak run com.sublimetext.three'
+    flatpak run com.sublimetext.three $argv &
+    disown
+end
 
 #-----------
 # Utilities
