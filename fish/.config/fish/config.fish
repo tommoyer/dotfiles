@@ -53,7 +53,7 @@ alias chown='chown -c'
 alias less='less -F'
 
 function subl --wraps flatpak --description 'alias subl=flatpak run com.sublimetext.three'
-    flatpak run com.sublimetext.three $argv &
+    flatpak run com.sublimetext.three $argv >/dev/null 2>&1 &
     disown
 end
 
