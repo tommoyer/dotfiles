@@ -142,7 +142,6 @@ update() {
 upgrade() {
   sudo apt update
   sudo apt dist-upgrade -y
-  sudo snap refresh
   sudo flatpak update
   zimfw update
   zimfw upgrade
@@ -183,6 +182,11 @@ function jiggle_jiggle () {
   done
 }
 
+function subl () {
+    flatpak run com.sublimetext.three "$@" >/dev/null 2>&1 &
+    disown
+}
+
 #--------------------
 # PATH configuration
 #--------------------
@@ -218,6 +222,7 @@ alias uncc='google-chrome --profile-directory="Profile 2"'
 # Fuzzy find for ZSH
 source_if_exists /usr/share/doc/fzf/examples/key-bindings.zsh
 source_if_exists /usr/share/doc/fzf/examples/completion.zsh
+source_if_exists /etc/profile.d/rvm.sh
 
 # Bat theme
 export BAT_THEME="Monokai Extended"
