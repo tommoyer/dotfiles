@@ -33,6 +33,7 @@ path_if_exists $HOME/Applications
 path_if_exists $HOME/bin
 path_if_exists $HOME/.local/bin
 path_if_exists $HOME/.npm-global/bin
+path_if_exists $HOME/.fly/bin
 
 #---------
 # Aliases
@@ -80,6 +81,8 @@ set -gx LSCOLORS {$LS_COLORS}
 
 set -gx EDITOR 'vim'
 set -gx VISUAL 'vim'
+
+set -gx FLYCTL_INSTALL '/home/tom-tom/.fly'
 
 # Start or re-use a gpg-agent.
 #
