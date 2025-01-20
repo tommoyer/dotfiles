@@ -142,7 +142,6 @@ update() {
 upgrade() {
   sudo apt update
   sudo apt dist-upgrade -y
-  sudo snap refresh
   sudo flatpak update
   zimfw update
   zimfw upgrade
@@ -181,6 +180,11 @@ function jiggle_jiggle () {
     xdotool mousemove 500 100
     sleep 60
   done
+}
+
+function subl () {
+    flatpak run com.sublimetext.three "$@" >/dev/null 2>&1 &
+    disown
 }
 
 #--------------------

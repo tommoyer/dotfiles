@@ -22,6 +22,7 @@
 	"gutter": true,
 	"ignored_packages":
 	[
+		"LaTeXTools"
 	],
 	"index_files": true,
 	"line_numbers": true,
