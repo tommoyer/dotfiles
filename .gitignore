@@ -5,6 +5,7 @@ apps/Applications/oama
 apps/Applications/TickTick-linux-x64/
 apps/Applications/xremap
 apps/Applications/yubikey-manager-qt-1.2.4b-linux.AppImage
+apps/Applications/sops
 mail/.config/offlineimap/config
 mimeapps.list
 mimeinfo.cache
