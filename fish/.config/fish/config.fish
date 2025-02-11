@@ -108,3 +108,4 @@ source_if_exists ~/.local_profile
 set -gx pure_color_mute brcyan
 
 end # is-interactive
+if not set -q VSCODE_CWD;   status --is-login; and status --is-interactive; and exec byobu-launcher;end
