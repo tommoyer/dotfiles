@@ -1,0 +1,6 @@
+
+[${HOME}/Repos/terrablue/opentofu-demo]
+checkout = git clone https://github.com/terrablue-ai-am/opentofu-demo.git ${HOME}/Repos/terrablue/opentofu-demo
+
+[${HOME}/Repos/terrablue/openproject]
+checkout = git clone https://github.com/terrablue-ai-am/openproject.git ${HOME}/Repos/terrablue/openproject
