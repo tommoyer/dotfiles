@@ -10,7 +10,8 @@ mail/.config/offlineimap/config
 mimeapps.list
 mimeinfo.cache
 mr/.config/mr/config.d
-ssh/.ssh/ansible*
+ssh/.ssh/ansible
+ssh/.ssh/terrablue
 ssh/.ssh/known_hosts
 ssh/.ssh/*.old
 subl/.config/sublime-text/Installed Packages
