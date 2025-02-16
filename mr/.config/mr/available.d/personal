@@ -15,14 +15,11 @@ checkout = git clone https://github.com/tommoyer/luadns.git ${HOME}/Repos/tommoy
 checkout = git clone https://github.com/tommoyer/dotfiles.git ${HOME}/.dotfiles
 order = 1
 
-[${HOME}/Repos/tommoyer/infrastructure]
-checkout = git clone https://github.com/tommoyer/infrastructure.git ${HOME}/Repos/tommoyer/infrastructure
+[${HOME}/Repos/tommoyer/infra]
+checkout = git clone https://github.com/tommoyer/infra.git ${HOME}/Repos/tommoyer/infra
 
 [${HOME}/Repos/tommoyer/pihole]
 checkout = git clone https://github.com/tommoyer/pihole.git ${HOME}/Repos/tommoyer/pihole
-
-[${HOME}/Repos/tommoyer/openwrt]
-checkout = git clone https://github.com/tommoyer/openwrt.git ${HOME}/Repos/tommoyer/openwrt
 
 [${HOME}/Arduino]
 checkout = git clone https://github.com/tommoyer/arduino.git ${HOME}/Arduino
@@ -38,6 +35,9 @@ skip = [ "$1" = push ]
 [${HOME}/.zsh-bash-completions-fallback]
 checkout =  git clone https://github.com/3v1n0/zsh-bash-completions-fallback ${HOME}/.zsh-bash-completions-fallback
 skip = [ "$1" = push ]
+
+# [${HOME}/Repos/tommoyer/openwrt]
+# checkout = git clone https://github.com/tommoyer/openwrt.git ${HOME}/Repos/tommoyer/openwrt
 
 # [${HOME}/.apps/git-latexdiff]
 # checkout = git clone https://gitlab.com/git-latexdiff/git-latexdiff.git ${HOME}/.apps/git-latexdiff
