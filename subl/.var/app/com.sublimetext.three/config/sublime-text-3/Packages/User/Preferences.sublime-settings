@@ -22,7 +22,8 @@
 	"gutter": true,
 	"ignored_packages":
 	[
-		"LaTeXTools"
+		"LaTeXTools",
+		"MarkdownEditing"
 	],
 	"index_files": true,
 	"line_numbers": true,

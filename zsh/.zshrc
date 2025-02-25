@@ -134,6 +134,9 @@ fpath=(~/.settings/zsh-completions/ $fpath)
 # Functions
 #-----------
 update() {
+  pushd $HOME/.dotfiles &> /dev/null
+  mr up
+  popd &> /dev/null
   pushd $HOME &> /dev/null
   mr up
   popd &> /dev/null

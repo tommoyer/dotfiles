@@ -56,3 +56,5 @@ checkout = git clone https://github.com/terrablue-ai-am/AI-Webhook.git ${HOME}/R
 [${HOME}/Repos/terrablue/supportassist-v2]
 checkout = git clone https://github.com/terrablue-ai-am/supportassist-v2.git ${HOME}/Repos/terrablue/supportassist-v2
 
+[${HOME}/Repos/terrablue/opentofu]
+checkout = git clone https://github.com/terrablue-ai-am/opentofu.git ${HOME}/Repos/terrablue/opentofu
