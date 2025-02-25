@@ -11,12 +11,6 @@ checkout = git clone https://github.com/terrablue-ai-am/Feedback-Get-QA.git ${HO
 [${HOME}/Repos/terrablue/Workspace-Swathi]
 checkout = git clone https://github.com/terrablue-ai-am/Workspace-Swathi.git ${HOME}/Repos/terrablue/Workspace-Swathi
 
-[${HOME}/Repos/terrablue/openproject]
-checkout = git clone https://github.com/terrablue-ai-am/openproject.git ${HOME}/Repos/terrablue/openproject
-
-[${HOME}/Repos/terrablue/opentofu-demo]
-checkout = git clone https://github.com/terrablue-ai-am/opentofu-demo.git ${HOME}/Repos/terrablue/opentofu-demo
-
 [${HOME}/Repos/terrablue/Feedback-Website]
 checkout = git clone https://github.com/terrablue-ai-am/Feedback-Website.git ${HOME}/Repos/terrablue/Feedback-Website
 
