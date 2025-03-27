@@ -39,6 +39,9 @@ skip = [ "$1" = push ]
 [${HOME}/Repos/tommoyer/ccd]
 checkout =  git clone https://github.com/tommoyer/ccd.git ${HOME}/Repos/tommoyer/ccd
 
+[${HOME}/Repos/tommoyer/functions-sandbox]
+checkout =  git clone https://github.com/tommoyer/functions-sandbox.git ${HOME}/Repos/tommoyer/functions-sandbox
+
 # [${HOME}/Repos/tommoyer/openwrt]
 # checkout = git clone https://github.com/tommoyer/openwrt.git ${HOME}/Repos/tommoyer/openwrt
 

@@ -272,8 +272,9 @@ export PATH=$PATH:$GOPATH/bin
 
 # Debian packaging variables
 export DEBFULLNAME="Tom Moyer"
-export DEBEMAIL="tom.moyer@canonical.com"
+export DEBEMAIL="tommoyer@gmail.com"
 
+export ALIEN_SECTION_PATH_COMPONENTS=2
 export ALIEN_THEME="gruvbox"
 export ALIEN_SECTION_USER_HOST=1
 
@@ -303,6 +304,8 @@ autoload -U +X bashcompinit && bashcompinit
 source_if_exists $HOME/.zsh-bash-completions-fallback/zsh-bash-completions-fallback.plugin.zsh
 
 fpath=(~/.config/zsh-completions $fpath)
+
+export DOCKER_HOST=tcp://docker-runner.incus:2375
 
 #--------------------------------
 # system-specific customizations
