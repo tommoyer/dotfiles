@@ -42,6 +42,9 @@ checkout =  git clone https://github.com/tommoyer/ccd.git ${HOME}/Repos/tommoyer
 [${HOME}/Repos/tommoyer/functions-sandbox]
 checkout =  git clone https://github.com/tommoyer/functions-sandbox.git ${HOME}/Repos/tommoyer/functions-sandbox
 
+[${HOME}/Repos/tommoyer/teleport]
+checkout =  git clone https://github.com/tommoyer/teleport.git ${HOME}/Repos/tommoyer/teleport
+
 # [${HOME}/Repos/tommoyer/openwrt]
 # checkout = git clone https://github.com/tommoyer/openwrt.git ${HOME}/Repos/tommoyer/openwrt
 
