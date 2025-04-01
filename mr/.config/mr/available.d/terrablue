@@ -62,8 +62,8 @@
 # ${HOME}/Repos/terrablue/supportassist-v2]
 #  = git clone https://github.com/terrablue-ai-am/supportassist-v2.git ${HOME}/Repos/terrablue/supportassist-v2
 
-# ${HOME}/Repos/terrablue/ticket-downloader]
-#  = git clone https://github.com/terrablue-ai-am/ticket-downloader.git ${HOME}/Repos/terrablue/ticket-downloader
+[${HOME}/Repos/terrablue/ticket-downloader]
+checkout = git clone https://github.com/terrablue-ai-am/ticket-downloader.git ${HOME}/Repos/terrablue/ticket-downloader
 
 # ${HOME}/Repos/terrablue/ticket_populator]
 #  = git clone https://github.com/terrablue-ai-am/ticket_populator.git ${HOME}/Repos/terrablue/ticket_populator
