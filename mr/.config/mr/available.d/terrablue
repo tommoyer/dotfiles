@@ -1,12 +1,12 @@
 
-# ${HOME}/Repos/terrablue/Agent-AIOSEO]
-#  = git clone https://github.com/terrablue-ai-am/Agent-AIOSEO.git ${HOME}/Repos/terrablue/Agent-AIOSEO
+[${HOME}/Repos/terrablue/Agent-AIOSEO]
+checkout = git clone https://github.com/terrablue-ai-am/Agent-AIOSEO.git ${HOME}/Repos/terrablue/Agent-AIOSEO
 
-# ${HOME}/Repos/terrablue/Agent-WPForms]
-#  = git clone https://github.com/terrablue-ai-am/Agent-WPForms.git ${HOME}/Repos/terrablue/Agent-WPForms
+[${HOME}/Repos/terrablue/Agent-WPForms]
+checkout = git clone https://github.com/terrablue-ai-am/Agent-WPForms.git ${HOME}/Repos/terrablue/Agent-WPForms
 
-# ${HOME}/Repos/terrablue/AI-Service]
-#  = git clone https://github.com/terrablue-ai-am/AI-Service.git ${HOME}/Repos/terrablue/AI-Service
+[${HOME}/Repos/terrablue/AI-Service]
+checkout = git clone https://github.com/terrablue-ai-am/AI-Service.git ${HOME}/Repos/terrablue/AI-Service
 
 # ${HOME}/Repos/terrablue/AI-Webhook]
 #  = git clone https://github.com/terrablue-ai-am/AI-Webhook.git ${HOME}/Repos/terrablue/AI-Webhook
@@ -61,6 +61,9 @@
 
 # ${HOME}/Repos/terrablue/supportassist-v2]
 #  = git clone https://github.com/terrablue-ai-am/supportassist-v2.git ${HOME}/Repos/terrablue/supportassist-v2
+
+[${HOME}/Repos/terrablue/test_ai_agent_website]
+checkout = git clone https://github.com/terrablue-ai-am/test_ai_agent_website.git ${HOME}/Repos/terrablue/test_ai_agent_website
 
 [${HOME}/Repos/terrablue/ticket-downloader]
 checkout = git clone https://github.com/terrablue-ai-am/ticket-downloader.git ${HOME}/Repos/terrablue/ticket-downloader
