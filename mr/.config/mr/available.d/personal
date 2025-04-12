@@ -18,11 +18,11 @@ order = 1
 [${HOME}/Repos/tommoyer/infra]
 checkout = git clone https://github.com/tommoyer/infra.git ${HOME}/Repos/tommoyer/infra
 
-[${HOME}/Repos/tommoyer/pihole]
-checkout = git clone https://github.com/tommoyer/pihole.git ${HOME}/Repos/tommoyer/pihole
+# [${HOME}/Repos/tommoyer/pihole]
+# checkout = git clone https://github.com/tommoyer/pihole.git ${HOME}/Repos/tommoyer/pihole
 
-[${HOME}/Arduino]
-checkout = git clone https://github.com/tommoyer/arduino.git ${HOME}/Arduino
+# [${HOME}/Arduino]
+# checkout = git clone https://github.com/tommoyer/arduino.git ${HOME}/Arduino
 
 [${HOME}/.apps/diff-so-fancy]
 checkout = git clone https://github.com/so-fancy/diff-so-fancy.git ${HOME}/.apps/diff-so-fancy
@@ -36,11 +36,11 @@ skip = [ "$1" = push ]
 checkout =  git clone https://github.com/3v1n0/zsh-bash-completions-fallback ${HOME}/.zsh-bash-completions-fallback
 skip = [ "$1" = push ]
 
-[${HOME}/Repos/tommoyer/ccd]
-checkout =  git clone https://github.com/tommoyer/ccd.git ${HOME}/Repos/tommoyer/ccd
+# [${HOME}/Repos/tommoyer/ccd]
+# checkout =  git clone https://github.com/tommoyer/ccd.git ${HOME}/Repos/tommoyer/ccd
 
-[${HOME}/Repos/tommoyer/functions-sandbox]
-checkout =  git clone https://github.com/tommoyer/functions-sandbox.git ${HOME}/Repos/tommoyer/functions-sandbox
+# [${HOME}/Repos/tommoyer/functions-sandbox]
+# checkout =  git clone https://github.com/tommoyer/functions-sandbox.git ${HOME}/Repos/tommoyer/functions-sandbox
 
 [${HOME}/Repos/tommoyer/teleport]
 checkout =  git clone https://github.com/tommoyer/teleport.git ${HOME}/Repos/tommoyer/teleport
