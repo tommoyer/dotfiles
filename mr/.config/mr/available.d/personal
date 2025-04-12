@@ -18,6 +18,12 @@ order = 1
 [${HOME}/Repos/tommoyer/infra]
 checkout = git clone https://github.com/tommoyer/infra.git ${HOME}/Repos/tommoyer/infra
 
+[${HOME}/Repos/tommoyer/homelab]
+checkout = git clone https://github.com/tommoyer/homelab.git ${HOME}/Repos/tommoyer/homelab
+
+[${HOME}/Repos/tommoyer/laptop]
+checkout = git clone https://github.com/tommoyer/laptop.git ${HOME}/Repos/tommoyer/laptop
+
 # [${HOME}/Repos/tommoyer/pihole]
 # checkout = git clone https://github.com/tommoyer/pihole.git ${HOME}/Repos/tommoyer/pihole
 
