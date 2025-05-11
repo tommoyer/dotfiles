@@ -199,6 +199,8 @@ path_if_exists ${HOME}/bin
 # Local PIP
 path_if_exists ${HOME}/.local/bin
 path_if_exists ${HOME}/.npm-global/bin
+# Go
+path_if_exists /usr/local/go/bin
 #---------
 # Aliases
 #---------
@@ -228,7 +230,7 @@ source_if_exists /usr/share/doc/fzf/examples/completion.zsh
 source_if_exists /etc/profile.d/rvm.sh
 
 # Bat theme
-export BAT_THEME="Monokai Extended"
+export BAT_THEME="Solarized (light)"
 
 #----------------------------
 # OS-specific configurations

@@ -1,4 +1,7 @@
 
+[${HOME}/Repos/tommoyer/nirvana]
+checkout = git clone https://github.com/tommoyer/nirvana.git ${HOME}/Repos/tommoyer/nirvana
+
 [${HOME}/Repos/tommoyer/www-academic]
 checkout = git clone https://github.com/tommoyer/www-academic.git ${HOME}/Repos/tommoyer/www-academic
 

@@ -1,12 +1,12 @@
 
-[${HOME}/Repos/terrablue/Agent-AIOSEO]
-checkout = git clone https://github.com/terrablue-ai-am/Agent-AIOSEO.git ${HOME}/Repos/terrablue/Agent-AIOSEO
+# [${HOME}/Repos/terrablue/Agent-AIOSEO]
+# checkout = git clone https://github.com/terrablue-ai-am/Agent-AIOSEO.git ${HOME}/Repos/terrablue/Agent-AIOSEO
 
-[${HOME}/Repos/terrablue/Agent-WPForms]
-checkout = git clone https://github.com/terrablue-ai-am/Agent-WPForms.git ${HOME}/Repos/terrablue/Agent-WPForms
+# [${HOME}/Repos/terrablue/Agent-WPForms]
+# checkout = git clone https://github.com/terrablue-ai-am/Agent-WPForms.git ${HOME}/Repos/terrablue/Agent-WPForms
 
-[${HOME}/Repos/terrablue/AI-Service]
-checkout = git clone https://github.com/terrablue-ai-am/AI-Service.git ${HOME}/Repos/terrablue/AI-Service
+# [${HOME}/Repos/terrablue/AI-Service]
+# checkout = git clone https://github.com/terrablue-ai-am/AI-Service.git ${HOME}/Repos/terrablue/AI-Service
 
 # ${HOME}/Repos/terrablue/AI-Webhook]
 #  = git clone https://github.com/terrablue-ai-am/AI-Webhook.git ${HOME}/Repos/terrablue/AI-Webhook
@@ -62,11 +62,11 @@ checkout = git clone https://github.com/terrablue-ai-am/AI-Service.git ${HOME}/R
 # ${HOME}/Repos/terrablue/supportassist-v2]
 #  = git clone https://github.com/terrablue-ai-am/supportassist-v2.git ${HOME}/Repos/terrablue/supportassist-v2
 
-[${HOME}/Repos/terrablue/test_ai_agent_website]
-checkout = git clone https://github.com/terrablue-ai-am/test_ai_agent_website.git ${HOME}/Repos/terrablue/test_ai_agent_website
+# [${HOME}/Repos/terrablue/test_ai_agent_website]
+# checkout = git clone https://github.com/terrablue-ai-am/test_ai_agent_website.git ${HOME}/Repos/terrablue/test_ai_agent_website
 
-[${HOME}/Repos/terrablue/ticket-downloader]
-checkout = git clone https://github.com/terrablue-ai-am/ticket-downloader.git ${HOME}/Repos/terrablue/ticket-downloader
+# [${HOME}/Repos/terrablue/ticket-downloader]
+# checkout = git clone https://github.com/terrablue-ai-am/ticket-downloader.git ${HOME}/Repos/terrablue/ticket-downloader
 
 # ${HOME}/Repos/terrablue/ticket_populator]
 #  = git clone https://github.com/terrablue-ai-am/ticket_populator.git ${HOME}/Repos/terrablue/ticket_populator
@@ -74,6 +74,6 @@ checkout = git clone https://github.com/terrablue-ai-am/ticket-downloader.git ${
 # ${HOME}/Repos/terrablue/Workspace-Swapnil]
 #  = git clone https://github.com/terrablue-ai-am/Workspace-Swapnil.git ${HOME}/Repos/terrablue/Workspace-Swapnil
 
-# ${HOME}/Repos/terrablue/Workspace-Swathi]
-#  = git clone https://github.com/terrablue-ai-am/Workspace-Swathi.git ${HOME}/Repos/terrablue/Workspace-Swathi
+[${HOME}/Repos/terrablue/Workspace-Swathi]
+checkout = git clone https://github.com/terrablue-ai-am/Workspace-Swathi.git ${HOME}/Repos/terrablue/Workspace-Swathi
 
