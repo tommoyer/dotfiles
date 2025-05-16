@@ -307,7 +307,7 @@ source_if_exists $HOME/.zsh-bash-completions-fallback/zsh-bash-completions-fallb
 
 fpath=(~/.config/zsh-completions $fpath)
 
-export DOCKER_HOST=tcp://docker-runner.incus:2375
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 #--------------------------------
 # system-specific customizations

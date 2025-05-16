@@ -87,3 +87,7 @@ checkout =  git clone https://github.com/tommoyer/teleport.git ${HOME}/Repos/tom
 # [${HOME}/.apps/prettyping]
 # checkout = git clone https://github.com/denilsonsa/prettyping.git ${HOME}/.apps/prettyping
 # skip = [ "$1" = push ]
+
+[${HOME}/Repos/tommoyer/challenge-0]
+checkout = git clone https://github.com/tommoyer/challenge-0.git ${HOME}/Repos/tommoyer/challenge-0
+
