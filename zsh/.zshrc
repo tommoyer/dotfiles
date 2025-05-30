@@ -312,6 +312,8 @@ then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+export GITHUB_USER="tommoyer"
+
 #--------------------------------
 # system-specific customizations
 #--------------------------------
