@@ -1,0 +1,32 @@
+#!/usr/bin/bash
+
+# Enable verbose logging
+VERBOSE=true
+
+function log() {
+    if [ "$VERBOSE" = true ]; then
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
+    fi
+}
+
+log "Script started"
+log "Checking arguments..."
+
+if [ $# -ne 2 ]; then
+    log "Error: Invalid number of arguments"
+    echo "Usage: $0 <containerName> <URL>"
+    exit 1
+fi
+
+containerName="$1"
+URL="$2"
+
+log "Container name: $containerName"
+log "URL: $URL"
+
+log "Launching Firefox with container parameters..."
+/usr/bin/firefox "ext+container:name=${containerName}&url=${URL}" &
+
+FIREFOX_PID=$!
+log "Firefox launched with PID: $FIREFOX_PID"
+log "Script finished successfully"
