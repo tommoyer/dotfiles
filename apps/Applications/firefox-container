@@ -1,72 +1,147 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-# Enable verbose logging
-VERBOSE=true
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-NEW_TAB_URL="https://start.me/p/ZQ1oYO/startpage"
-
-function log() {
-    if [ "$VERBOSE" = true ]; then
-        echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
-    fi
+usage() {
+	app=$(basename $0)
+	printf "$app - open URL in a specific container in Firefox.\n\n"
+	printf "Usage:\n"
+	printf "\t$app [OPTIONS] URL\n"
+	printf "\t$app URL [OPTIONS]\n"
+	printf "\t$app -h|--help\n\n"
+	printf "Where optional OPTIONS may include any combination of:\n"
+	printf "\t--COLOR\t\tcolor for the container (if does not exist)\n"
+	printf "\t--ICON\t\ticon for the container (if does not exist)\n"
+	printf "  -n,\t--name=NAME\tcontainer name (default: domain part of the URL)\n"
+	printf "  -p,\t--pin\t\tpin tab\n"
+	printf "  -r,\t--reader\topen tab in the reader mode\n\n"
+	printf "Where COLOR is one of:\n\t--blue\n\t--turquoise\n\t--green\n\t--yellow\n\t--orange\n\t--red\n\t--pink\n\t--purple\n\n"
+	printf "Where ICON is one of:\n\t--fingerprint\n\t--briefcase\n\t--dollar\n\t--cart\n\t--circle\n\t--gift\n\t--vacation\n\t--food\n\t--fruit\n\t--pet\n\t--tree\n\t--chill\n"
+	exit 1
 }
 
-function usage() {
-    echo "Usage: $(basename "$0") [OPTIONS]"
-    echo "Launch Firefox with a specific container and URL"
-    echo
-    echo "Options:"
-    echo "  -c CONTAINER  Specify the container name"
-    echo "  -u URL        Specify the URL to open"
-    echo "  -h            Display this help message and exit"
-    echo
-    echo "Example: $(basename "$0") -c personal -u https://github.com"
+assertOnlyOne() {
+	var="$1"
+	if [ -n "${!var}" ]
+	then
+		echo "Error: Only one $var allowed"
+		usage
+	fi
 }
 
-log "Script started"
-log "Parsing arguments..."
+assertRequired() {
+	var="$1"
+	if [ -z "${!var}" ]
+	then
+		echo "Error: URL is a required parameter"
+		usage
+	fi
+}
 
-containerName=""
-URL=""
+# code from: https://stackoverflow.com/questions/296536/how-to-urlencode-data-for-curl-command
+urlencode() {
+  local string="${1}"
+  local strlen=${#string}
+  local encoded=""
+  local pos c o
 
-fullURL=""
+  for (( pos=0 ; pos<strlen ; pos++ )); do
+     c=${string:$pos:1}
+     case "$c" in
+        [-_.~a-zA-Z0-9] ) o="${c}" ;;
+        * )               printf -v o '%%%02x' "'$c"
+     esac
+     encoded+="${o}"
+  done
+  echo "${encoded}"
+}
 
-# Parse command line arguments
-while getopts "c:u:h" opt; do
-    case ${opt} in
-        c)
-            containerName=$OPTARG
-            log "Container name set to: $containerName"
-            ;;
-        u)
-            URL=$OPTARG
-            log "URL set to: $URL"
-            ;;
-        h)
-            usage
-            exit 0
-            ;;
-        \?)
-            echo "Invalid option: -$OPTARG" >&2
-            usage
-            exit 1
-            ;;
-    esac
-done
-
-if [[ ! -z $containerName && ! -z ${URL} ]]; then
-    fullURL="ext+container:name=${containerName}&url=${URL}"
-elif [[ ! -z $containerName && -z ${URL} ]]; then
-    fullURL="ext+container:name=${containerName}&url=${NEW_TAB_URL}"
-elif [[ ! -z $URL ]]; then
-    fullURL=$URL
-else
-    log "Info: No container name or URL provided. Defaulting to opening Firefox without a container."
+if [ -z "$FIREFOX" ]
+then
+	FIREFOX=firefox
 fi
 
-log "Launching Firefox with container parameters..."
-/usr/bin/firefox "${fullURL}" &
+while [[ $# -gt 0 ]]
+do
+	key="$1"
+	case $key in
+	-h|--help)
+		usage
+		;;
+	-n|--name)
+		assertOnlyOne NAME
+		NAME="$2"
+		shift
+		shift
+		;;
+	--name=*)
+		assertOnlyOne NAME
+		_name="$1"
+		NAME="${_name#--name=}"
+		shift
+		;;
+	--blue|--turquoise|--green|--yellow|--orange|--red|--pink|--purple)
+		assertOnlyOne COLOR
+		COLOR="${1#--}"
+		shift
+		;;
+	--fingerprint|--briefcase|--dollar|--cart|--circle|--gift|--vacation|--food|--fruit|--pet|--tree|--chill)
+		assertOnlyOne ICON
+		ICON="${1#--}"
+		shift
+		;;
+	-p|--pin)
+		PIN=true
+		shift
+		;;
+	-r|--reader)
+		READER_MODE=true
+		shift
+		;;
+	--*|-*)
+		echo "Error: Unknown parameter: $1"
+		usage
+		;;
+	*)
+		assertOnlyOne URL
+		URL="$1"
+		shift
+		;;
+	esac
+done
 
-FIREFOX_PID=$!
-log "Firefox launched with PID: $FIREFOX_PID"
-log "Script finished successfully"
+assertRequired URL
+
+if [ -z "$NAME" ]
+then
+	NAME=${URL#*//} # strip [method:]//
+	NAME=${NAME%%/*} # strip path
+fi
+
+URL=$(urlencode $URL)
+
+FULL_URL="ext+container:url=${URL}&name=${NAME}"
+
+if [ -n "$COLOR" ]
+then
+	FULL_URL="${FULL_URL}&color=${COLOR}"
+fi
+
+if [ -n "$ICON" ]
+then
+	FULL_URL="${FULL_URL}&icon=${ICON}"
+fi
+
+if [ -n "$PIN" ]
+then
+	FULL_URL="${FULL_URL}&pinned=true"
+fi
+
+if [ -n "$READER_MODE" ]
+then
+	FULL_URL="${FULL_URL}&openInReaderMode=true"
+fi
+
+$FIREFOX $FIREFOX_ARGS "$FULL_URL"
