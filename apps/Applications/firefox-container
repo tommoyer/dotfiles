@@ -3,29 +3,69 @@
 # Enable verbose logging
 VERBOSE=true
 
+NEW_TAB_URL="https://start.me/p/ZQ1oYO/startpage"
+
 function log() {
     if [ "$VERBOSE" = true ]; then
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1"
     fi
 }
 
-log "Script started"
-log "Checking arguments..."
+function usage() {
+    echo "Usage: $(basename "$0") [OPTIONS]"
+    echo "Launch Firefox with a specific container and URL"
+    echo
+    echo "Options:"
+    echo "  -c CONTAINER  Specify the container name"
+    echo "  -u URL        Specify the URL to open"
+    echo "  -h            Display this help message and exit"
+    echo
+    echo "Example: $(basename "$0") -c personal -u https://github.com"
+}
 
-if [ $# -ne 2 ]; then
-    log "Error: Invalid number of arguments"
-    echo "Usage: $0 <containerName> <URL>"
-    exit 1
+log "Script started"
+log "Parsing arguments..."
+
+containerName=""
+URL=""
+
+fullURL=""
+
+# Parse command line arguments
+while getopts "c:u:h" opt; do
+    case ${opt} in
+        c)
+            containerName=$OPTARG
+            log "Container name set to: $containerName"
+            ;;
+        u)
+            URL=$OPTARG
+            log "URL set to: $URL"
+            ;;
+        h)
+            usage
+            exit 0
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            usage
+            exit 1
+            ;;
+    esac
+done
+
+if [[ ! -z $containerName && ! -z ${URL} ]]; then
+    fullURL="ext+container:name=${containerName}&url=${URL}"
+elif [[ ! -z $containerName && -z ${URL} ]]; then
+    fullURL="ext+container:name=${containerName}&url=${NEW_TAB_URL}"
+elif [[ ! -z $URL ]]; then
+    fullURL=$URL
+else
+    log "Info: No container name or URL provided. Defaulting to opening Firefox without a container."
 fi
 
-containerName="$1"
-URL="$2"
-
-log "Container name: $containerName"
-log "URL: $URL"
-
 log "Launching Firefox with container parameters..."
-/usr/bin/firefox "ext+container:name=${containerName}&url=${URL}" &
+/usr/bin/firefox "${fullURL}" &
 
 FIREFOX_PID=$!
 log "Firefox launched with PID: $FIREFOX_PID"
