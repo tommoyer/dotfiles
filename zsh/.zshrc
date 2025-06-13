@@ -142,14 +142,6 @@ update() {
   popd &> /dev/null
 }
 
-upgrade() {
-  sudo apt update
-  sudo apt dist-upgrade -y
-  sudo flatpak update
-  zimfw update
-  zimfw upgrade
-}
-
 source_if_exists() {
   [[ -z $1 ]] && return
   [[ -e $1 ]] && source $1
@@ -158,36 +150,6 @@ source_if_exists() {
 path_if_exists() {
   [[ -z $1 ]] && return
   [[ -e $1 ]] && export PATH="$1:${PATH}"
-}
-
-repos () {
-  subl ~/.config/mr/available.d/*
-}
-
-new_mr () {
-  cat <<-EOF
-[$HOME/Repos/${2}]
-checkout = git clone ${1} ~/Repos/${2}
-EOF
-}
-
-function swap_yubikey () {
-  gpg-connect-agent "scd serialno" "learn --force" /bye
-}
-
-function jiggle_jiggle () {
-  while true
-  do
-    xdotool mousemove 100 500
-    sleep 60
-    xdotool mousemove 500 100
-    sleep 60
-  done
-}
-
-function subl () {
-    flatpak run com.sublimetext.three "$@" >/dev/null 2>&1 &
-    disown
 }
 
 #--------------------
@@ -201,10 +163,10 @@ path_if_exists ${HOME}/.local/bin
 path_if_exists ${HOME}/.npm-global/bin
 # Go
 path_if_exists /usr/local/go/bin
+
 #---------
 # Aliases
 #---------
-# alias setup
 alias cdl='cd; clear'
 alias ckpt='git commit -a -m "checkpoint"; git push'
 alias ping='prettyping --nolegend'
@@ -217,9 +179,6 @@ alias v=vagrant
 alias chmod='chmod -c'
 alias chown='chown -c'
 alias less='less -F'
-alias canonical='google-chrome --profile-directory=Default'
-alias gmail='google-chrome --profile-directory="Profile 1"'
-alias uncc='google-chrome --profile-directory="Profile 2"'
 
 #-----------
 # Utilities
@@ -229,8 +188,11 @@ source_if_exists /usr/share/doc/fzf/examples/key-bindings.zsh
 source_if_exists /usr/share/doc/fzf/examples/completion.zsh
 source_if_exists /etc/profile.d/rvm.sh
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # Bat theme
-export BAT_THEME="Solarized (light)"
+export BAT_THEME="gruvbox-dark"
 
 #----------------------------
 # OS-specific configurations

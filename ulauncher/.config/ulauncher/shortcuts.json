@@ -1,0 +1,42 @@
+{
+    "134c2d76-60b7-4e19-b19b-4749e96e1df5": {
+        "id": "134c2d76-60b7-4e19-b19b-4749e96e1df5",
+        "name": "Google Search",
+        "keyword": "g",
+        "cmd": "https://google.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/google-search-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1749214643.500896
+    },
+    "08dea19d-184e-4019-980d-0854591eaec0": {
+        "id": "08dea19d-184e-4019-980d-0854591eaec0",
+        "name": "Stack Overflow",
+        "keyword": "so",
+        "cmd": "https://stackoverflow.com/search?q=%s",
+        "icon": "/usr/share/ulauncher/media/stackoverflow-icon.svg",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1749214643.500917
+    },
+    "1d21fb35-a6f5-4f4a-af3a-6846731011de": {
+        "id": "1d21fb35-a6f5-4f4a-af3a-6846731011de",
+        "name": "Wikipedia",
+        "keyword": "wiki",
+        "cmd": "https://en.wikipedia.org/wiki/%s",
+        "icon": "/usr/share/ulauncher/media/wikipedia-icon.png",
+        "is_default_search": true,
+        "run_without_argument": false,
+        "added": 1749214643.50093
+    },
+    "b8099c28-0cdb-40b0-b285-38dafe5a5cf6": {
+        "id": "b8099c28-0cdb-40b0-b285-38dafe5a5cf6",
+        "name": "New Terminal Window",
+        "keyword": "term",
+        "cmd": "ptyxis --new-window",
+        "icon": "/usr/share/icons/hicolor/scalable/apps/org.gnome.Ptyxis.svg",
+        "is_default_search": false,
+        "run_without_argument": true,
+        "added": 1749759371.2615647
+    }
+}

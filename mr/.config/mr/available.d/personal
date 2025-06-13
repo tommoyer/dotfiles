@@ -33,9 +33,9 @@ checkout = git clone https://github.com/tommoyer/laptop.git ${HOME}/Repos/tommoy
 # [${HOME}/Arduino]
 # checkout = git clone https://github.com/tommoyer/arduino.git ${HOME}/Arduino
 
-[${HOME}/.apps/diff-so-fancy]
-checkout = git clone https://github.com/so-fancy/diff-so-fancy.git ${HOME}/.apps/diff-so-fancy
-skip = [ "$1" = push ]
+# [${HOME}/.apps/diff-so-fancy]
+# checkout = git clone https://github.com/so-fancy/diff-so-fancy.git ${HOME}/.apps/diff-so-fancy
+# skip = [ "$1" = push ]
 
 [${HOME}/.alien]
 checkout = git clone --recurse-submodules https://github.com/eendroroy/alien.git ${HOME}/.alien
