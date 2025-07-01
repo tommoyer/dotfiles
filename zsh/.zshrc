@@ -276,7 +276,20 @@ fi
 
 export GITHUB_USER="tommoyer"
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
+eval "$(pyenv virtualenv-init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/tom-tom/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/tom-tom/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/tom-tom/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/tom-tom/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
 #--------------------------------
 # system-specific customizations
 #--------------------------------
 source_if_exists ~/.local_profile
+
