@@ -71,9 +71,9 @@
 # ${HOME}/Repos/terrablue/ticket_populator]
 #  = git clone https://github.com/terrablue-ai-am/ticket_populator.git ${HOME}/Repos/terrablue/ticket_populator
 
-# ${HOME}/Repos/terrablue/Workspace-Swapnil]
-#  = git clone https://github.com/terrablue-ai-am/Workspace-Swapnil.git ${HOME}/Repos/terrablue/Workspace-Swapnil
+[${HOME}/Repos/terrablue/Workspace-Swapnil]
+checkout = git clone https://github.com/terrablue-ai-am/Workspace-Swapnil.git ${HOME}/Repos/terrablue/Workspace-Swapnil
 
-[${HOME}/Repos/terrablue/Workspace-Swathi]
-checkout = git clone https://github.com/terrablue-ai-am/Workspace-Swathi.git ${HOME}/Repos/terrablue/Workspace-Swathi
+# [${HOME}/Repos/terrablue/Workspace-Swathi]
+# checkout = git clone https://github.com/terrablue-ai-am/Workspace-Swathi.git ${HOME}/Repos/terrablue/Workspace-Swathi
 

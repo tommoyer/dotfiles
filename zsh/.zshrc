@@ -179,6 +179,7 @@ alias v=vagrant
 alias chmod='chmod -c'
 alias chown='chown -c'
 alias less='less -F'
+alias task='go-task'
 
 #-----------
 # Utilities
