@@ -152,6 +152,76 @@ path_if_exists() {
   [[ -e $1 ]] && export PATH="$1:${PATH}"
 }
 
+jobs_done() {
+  paplay ~/Music/jobs-done.mp3
+}
+
+work() {
+  # work: open VS Code, optionally selecting a .code-workspace
+  # Usage:
+  #   work                -> open .code-workspace or new window
+  #   work -w             -> /usr/bin/code -n (skip workspace search)
+  #   work -- <args...>   -> pass extra args to /usr/bin/code
+  #   work -w -- <args...>
+  emulate -L zsh
+  setopt localoptions
+
+  # Split args on --
+  local -a _rem _pass
+  local _seen_dd=0
+  for a in "$@"; do
+    if (( _seen_dd )); then
+      _pass+=("$a")
+    elif [[ "$a" == -- ]]; then
+      _seen_dd=1
+    else
+      _rem+=("$a")
+    fi
+  done
+
+  # -w -> open new window, skip workspace search
+  if [[ "${_rem[1]}" == "-w" ]]; then
+    /usr/bin/code -n "${_pass[@]}"
+    return $?
+  fi
+
+  # Any other args before -- are treated as paths/flags to code
+  # This handles cases like `work .` to open the current directory
+  if (( ${#_rem[@]} > 0 )); then
+    /usr/bin/code -n "${_rem[@]}" "${_pass[@]}"
+    return $?
+  fi
+
+  # Default behavior: find and open a workspace in current dir
+  local -a _ws
+  # Use nullglob (N) so no-match yields empty list
+  _ws=( *.code-workspace(N) )
+
+  if (( ${#_ws[@]} == 0 )); then
+    # No workspace found, open new window
+    /usr/bin/code -n "${_pass[@]}"
+    return $?
+  fi
+
+  local _sel=""
+  if (( ${#_ws[@]} == 1 )); then
+    _sel="${_ws[1]}"
+  else
+    if command -v fzf >/dev/null 2>&1; then
+      _sel=$(printf '%s\n' "${_ws[@]}" | fzf --prompt="Select workspace> " --height=40% --reverse) || return 1
+    else
+      print "Select a workspace:"
+      select _sel in "${_ws[@]}"; do
+        [[ -n "$_sel" ]] && break
+        print "Invalid selection."
+      done
+    fi
+  fi
+
+  /usr/bin/code -n "$_sel" "${_pass[@]}"
+  return $?
+}
+
 #--------------------
 # PATH configuration
 #--------------------
@@ -279,18 +349,21 @@ export GITHUB_USER="tommoyer"
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+eval "$(pyenv init -)"
 
 eval "$(pyenv virtualenv-init -)"
 
+eval "$(direnv hook zsh)"
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/tom-tom/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/tom-tom/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/home/tom-tom/.dotfiles/apps/Applications/google-cloud-sdk/path.zsh.inc' ]; then . '/home/tom-tom/.dotfiles/apps/Applications/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/tom-tom/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/tom-tom/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/home/tom-tom/.dotfiles/apps/Applications/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/tom-tom/.dotfiles/apps/Applications/google-cloud-sdk/completion.zsh.inc'; fi
 
 #--------------------------------
 # system-specific customizations
 #--------------------------------
 source_if_exists ~/.local_profile
+
 

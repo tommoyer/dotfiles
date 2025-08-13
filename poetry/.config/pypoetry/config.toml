@@ -1,0 +1,5 @@
+[virtualenvs]
+in-project = true
+
+[repositories.gcp-artifact-registry]
+url = "https://us-central1-python.pkg.dev/support-assist-384720/supportassist-artifacts/"
