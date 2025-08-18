@@ -199,7 +199,7 @@ work() {
 
   if (( ${#_ws[@]} == 0 )); then
     # No workspace found, open new window
-    /usr/bin/code -n "${_pass[@]}"
+    /usr/bin/code -n "${_pass[@]}" .
     return $?
   fi
 
