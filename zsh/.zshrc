@@ -153,7 +153,12 @@ path_if_exists() {
 }
 
 jobs_done() {
-  paplay ~/Music/jobs-done.mp3
+  if [[ $? == 0 ]]
+  then
+    paplay ~/Music/jobs-done.mp3
+  else
+    paplay ~/Music/oh-noo.mp3
+  fi
 }
 
 work() {
