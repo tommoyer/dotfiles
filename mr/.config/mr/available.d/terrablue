@@ -56,8 +56,8 @@
 # ${HOME}/Repos/terrablue/Skip-Feedback-Website]
 #  = git clone https://github.com/terrablue-ai-am/Skip-Feedback-Website.git ${HOME}/Repos/terrablue/Skip-Feedback-Website
 
-# ${HOME}/Repos/terrablue/supportassist]
-#  = git clone https://github.com/terrablue-ai-am/supportassist.git ${HOME}/Repos/terrablue/supportassist
+[${HOME}/Repos/terrablue/supportassist]
+checkout = git clone https://github.com/terrablue-ai-am/supportassist.git ${HOME}/Repos/terrablue/supportassist
 
 # ${HOME}/Repos/terrablue/supportassist-v2]
 #  = git clone https://github.com/terrablue-ai-am/supportassist-v2.git ${HOME}/Repos/terrablue/supportassist-v2
