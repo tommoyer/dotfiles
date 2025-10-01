@@ -3,9 +3,9 @@ unmailboxes *
 
 # in/out mail servers
 set realname = "Tom Moyer"
-set imap_pass = "{{ (bitwarden 'items' 'uncc-app-password').notes }}"
+set imap_pass = "{{ (bitwarden "item" "uncc-app-password").notes }}"
 set smtp_url = "smtps://tmoyer2@charlotte.edu@smtp.gmail.com:587"
-set smtp_pass = "{{ (bitwarden 'items' 'uncc-app-password').notes }}"
+set smtp_pass = "{{ (bitwarden "item" "uncc-app-password").notes }}"
 set folder = "imaps://tmoyer2@charlotte.edu@imap.gmail.com:993"
 set spoolfile = "+INBOX"
 
@@ -34,5 +34,5 @@ set sort = reverse-threads
 set sort_aux = last-date-received
 
 ## Hook -- IMPORTANT!
-account-hook $folder "set imap_pass={{ (bitwarden 'items' 'uncc-app-password').notes }}"
+account-hook $folder "set imap_pass={{ (bitwarden "item" "uncc-app-password").notes }}"
 
