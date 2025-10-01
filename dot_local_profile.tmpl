@@ -1,0 +1,4 @@
+export GH_TOKEN="{{ (bitwarden "item" "GitHub Token").notes }}"
+export GITHUB_TOKEN="${GH_TOKEN}"
+export TAILSCALE_OAUTH_CLIENT_ID="{{ (bitwarden "item" "TailScale OAuth Client").login.username }}"
+export TAILSCALE_OAUTH_CLIENT_SECRET="{{ (bitwarden "item" "TailScale OAuth Client").login.password }}"

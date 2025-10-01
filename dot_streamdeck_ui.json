@@ -1,0 +1,236 @@
+{
+    "streamdeck_ui_version": 1,
+    "state": {
+        "DL36L2A36558": {
+            "buttons": {
+                "0": {
+                    "0": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/2023_Obsidian_logo.svg.png",
+                        "command": "xdg-open \"obsidian://advanced-uri?vault=Notes&workspace=main\""
+                    },
+                    "1": {
+                        "command": "/usr/bin/gnome-terminal",
+                        "icon": "/usr/share/icons/Humanity/apps/64/konsole.svg"
+                    },
+                    "2": {
+                        "command": "google-chrome-stable",
+                        "icon": "/opt/google/chrome/product_logo_256.png",
+                        "text": ""
+                    },
+                    "3": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/cooling-fan_9153825.png",
+                        "command": "/home/tom-tom/Applications/toggle-fan.sh"
+                    },
+                    "4": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/light-bulb_2988036.png",
+                        "command": "/home/tom-tom/Applications/toggle-light.sh"
+                    },
+                    "5": {
+                        "icon": "/opt/Moneydance/resources/moneydance_icon512.png",
+                        "command": "/bin/sh \"/opt/Moneydance/Moneydance\""
+                    },
+                    "6": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/previous-svgrepo-com.svg",
+                        "keys": "media_previous"
+                    },
+                    "7": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/video-play-pause-svgrepo-com.svg",
+                        "keys": "media_play_pause"
+                    },
+                    "8": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/next-svgrepo-com.svg",
+                        "keys": "media_next"
+                    },
+                    "9": {
+                        "command": "/opt/sublime_text/sublime_text",
+                        "icon": "/opt/sublime_text/Icon/256x256/sublime-text.png"
+                    },
+                    "10": {
+                        "keys": "",
+                        "icon": "/home/tom-tom/Pictures/streamdeck/headphone.png",
+                        "command": "/home/tom-tom/Applications/set-audio.sh"
+                    },
+                    "11": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/speaker-1-svgrepo-com.svg",
+                        "keys": "media_volume_down"
+                    },
+                    "12": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/speaker-none-svgrepo-com.svg",
+                        "keys": "media_volume_mute"
+                    },
+                    "13": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/speaker-svgrepo-com.svg",
+                        "keys": "media_volume_up"
+                    },
+                    "14": {
+                        "switch_page": 2,
+                        "icon": "/home/tom-tom/Pictures/streamdeck/next.png"
+                    }
+                },
+                "1": {
+                    "0": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/pihole.png",
+                        "command": "/home/tom-tom/Applications/disable-pihole.sh"
+                    },
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {
+                        "icon": "/home/tom-tom/Pictures/streamdeck/before.png",
+                        "switch_page": 1
+                    },
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "2": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "3": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "4": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "5": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "6": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "7": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "8": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                },
+                "9": {
+                    "0": {},
+                    "1": {},
+                    "2": {},
+                    "3": {},
+                    "4": {},
+                    "5": {},
+                    "6": {},
+                    "7": {},
+                    "8": {},
+                    "9": {},
+                    "10": {},
+                    "11": {},
+                    "12": {},
+                    "13": {},
+                    "14": {}
+                }
+            },
+            "page": 0,
+            "display_timeout": 60,
+            "brightness": 99,
+            "brightness_dimmed": 46
+        }
+    }
+}
