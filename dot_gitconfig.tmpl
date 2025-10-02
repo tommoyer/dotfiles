@@ -44,5 +44,6 @@
 	defaultBranch = main
 [gitubuntu]
 	lpuser = tom-tom
-[include]
-	path = ~/.gitconfig.gh
+[url "https://tommoyer:{{ (bitwarden "item" "GitHub Token").notes }}@github.com"]
+	insteadOf = https://github.com
+
