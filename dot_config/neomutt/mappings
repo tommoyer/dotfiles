@@ -30,7 +30,6 @@ bind pager \031 previous-line		# Mouse wheel
 bind pager \005 next-line		# Mouse wheel
 bind editor <Tab> complete-query
 
-
 # sidebar mappings
 bind index,pager \Ck sidebar-prev
 bind index,pager \Cj sidebar-next
@@ -50,9 +49,11 @@ bind editor <Tab> complete-query
 bind editor ^T complete
 
 # Press A to add contact to Khard address book
-macro index,pager A \
+macro index,pager C \
     "<pipe-message>khard add-email<return>" \
     "add the sender email address to khard"
+
+macro index,pager A "<save-message>=[Gmail]/All Mail<enter><enter>" "Archive Message"
 
 ## Shortcuts
 macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.config/neomutt/accounts/gmail<enter><change-folder>!<enter>'
