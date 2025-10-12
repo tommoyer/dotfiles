@@ -161,6 +161,10 @@ jobs_done() {
   fi
 }
 
+bw_login() {
+  export BW_SESSION="$(/usr/bin/bw unlock --raw)"
+}
+
 work() {
   # work: open VS Code, optionally selecting a .code-workspace
   # Usage:
@@ -294,6 +298,8 @@ fi
 
 export EDITOR=vim
 export VISUAL=vim
+
+export BROWSER=/usr/bin/google-chrome-stable
 
 # Load any SSH keys into ssh-agent
 #ssh-add -qk
