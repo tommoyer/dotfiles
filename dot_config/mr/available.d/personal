@@ -70,6 +70,9 @@ checkout = git clone https://github.com/tommoyer/Watson.git ${HOME}/Repos/tommoy
 [${HOME}/Repos/tommoyer/watson-tray]
 checkout = git clone https://github.com/tommoyer/watson-tray.git ${HOME}/Repos/tommoyer/watson-tray
 
+[${HOME}/Repos/tommoyer/timew-tray]
+checkout = git clone https://github.com/tommoyer/timew-tray.git ${HOME}/Repos/tommoyer/timew-tray
+
 # [/home/tmoyer/Repos/tommoyer/class-ansible]
 # checkout = git clone https://github.com/tommoyer/class-ansible.git ${HOME}/Repos/tommoyer/class-ansible
 
@@ -91,3 +94,8 @@ checkout = git clone https://github.com/tommoyer/watson-tray.git ${HOME}/Repos/t
 # [${HOME}/Repos/tommoyer/challenge-0]
 # checkout = git clone https://github.com/tommoyer/challenge-0.git ${HOME}/Repos/tommoyer/challenge-0
 
+[${HOME}/Repos/tommoyer/itis-3246]
+checkout = git clone https://github.com/tommoyer/itis-3246.git ${HOME}/Repos/tommoyer/itis-3246
+
+[${HOME}/Repos/tommoyer/itis-4-5246]
+checkout = git clone https://github.com/tommoyer/itis-4-5246.git ${HOME}/Repos/tommoyer/itis-4-5246
