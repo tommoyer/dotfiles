@@ -99,3 +99,7 @@ checkout = git clone https://github.com/tommoyer/itis-3246.git ${HOME}/Repos/tom
 
 [${HOME}/Repos/tommoyer/itis-4-5246]
 checkout = git clone https://github.com/tommoyer/itis-4-5246.git ${HOME}/Repos/tommoyer/itis-4-5246
+
+[${HOME}/Repos/tommoyer/TimeTaskTray]
+checkout = git clone https://github.com/tommoyer/TimeTaskTray.git ${HOME}/Repos/tommoyer/TimeTaskTray
+
