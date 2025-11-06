@@ -165,6 +165,39 @@ bw_login() {
   export BW_SESSION="$(/usr/bin/bw unlock --raw)"
 }
 
+chezmoi() {
+  emulate -L zsh -o no_aliases -o pipefail
+
+  local BW=/usr/bin/bw
+  local need_unlock=0
+
+  # If BW_SESSION is unset, or set but not actually "unlocked", we need to unlock.
+  if (( ! ${+BW_SESSION} )); then
+    need_unlock=1
+  else
+    # Verify status without jq; look for the word "unlocked"
+    local status
+    status="$("$BW" status --raw 2>/dev/null)" || need_unlock=1
+    [[ "$status" == *"unlocked"* ]] || need_unlock=1
+  fi
+
+  if (( need_unlock )); then
+    local session
+    session="$("$BW" unlock --raw)" || {
+      print -u2 "chezmoi wrapper: failed to unlock Bitwarden (bw unlock)."
+      return 1
+    }
+    # Persist for the rest of this shell session
+    export BW_SESSION="$session"
+  fi
+
+  # Run the real binary, avoiding recursion
+  command chezmoi "$@"
+}
+
+# Preserve existing chezmoi completion if present
+(( $+functions[_chezmoi] )) && compdef _chezmoi chezmoi
+
 work() {
   # work: open VS Code, optionally selecting a .code-workspace
   # Usage:
