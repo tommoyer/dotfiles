@@ -292,6 +292,7 @@ alias chmod='chmod -c'
 alias chown='chown -c'
 alias less='less -F'
 alias t='go-task'
+alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock docker.io/wagoodman/dive"
 
 #-----------
 # Utilities
