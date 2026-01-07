@@ -50,6 +50,12 @@
         dest: "{{ ansible_env.HOME }}/.local_profile"
         mode: '0644'
 
+    - name: Deploy user ansible.cfg from template
+      template:
+        src: templates/ansible_user.cfg.j2
+        dest: "{{ ansible_env.HOME }}/.ansible.cfg"
+        mode: '0644'
+
     - name: Deploy disable-pihole.sh script
       template:
         src: templates/disable-pihole.sh.j2
@@ -73,7 +79,6 @@
         dest: "{{ ansible_env.HOME }}/.{{ item }}"
         mode: '0644'
       loop:
-        - ansible.cfg
         - aspell.en.prepl
         - aspell.en.pws
         - gitignore

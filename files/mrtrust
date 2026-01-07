@@ -1,4 +1,4 @@
-/home/tmoyer/.config/mr/available.d/personal
-/home/tmoyer/.config/mr/available.d/provenance
-/home/tmoyer/.config/mr/available.d/uncc
-/home/tmoyer/.config/mr/available.d/canonical
+${HOME}/.config/mr/available.d/personal
+${HOME}/.config/mr/available.d/provenance
+${HOME}/.config/mr/available.d/uncc
+${HOME}/.config/mr/available.d/canonical
