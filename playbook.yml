@@ -1,0 +1,213 @@
+---
+- name: Deploy dotfiles
+  hosts: local
+  vars_files:
+    - vars/secrets.yml
+  
+  tasks:
+    # Create necessary directories
+    - name: Ensure home directories exist
+      file:
+        path: "{{ ansible_env.HOME }}/{{ item }}"
+        state: directory
+        mode: '0755'
+      loop:
+        - .config
+        - .local
+        - .local/share
+        - .local/share/fonts
+        - .ssh
+        - .gnupg
+        - Applications
+        - Music
+        - Pictures
+        - .config/neomutt
+        - .config/neomutt/accounts
+        - .config/neomutt/gmail/cache
+        - .config/neomutt/gmail/certificates
+        - .config/neomutt/gmail/headers
+        - .config/neomutt/terrablue/cache
+        - .config/neomutt/terrablue/certificates
+        - .config/neomutt/terrablue/headers
+        - .config/neomutt/uncc/cache
+        - .config/neomutt/uncc/certificates
+        - .config/neomutt/uncc/headers
+        - .config/watson
+        - .config/fontconfig/conf.d
+        - .config/mr/available.d
+        - .config/zsh-completions
+
+    # Deploy template files
+    - name: Deploy .gitconfig from template
+      template:
+        src: templates/gitconfig.j2
+        dest: "{{ ansible_env.HOME }}/.gitconfig"
+        mode: '0644'
+
+    - name: Deploy .local_profile from template
+      template:
+        src: templates/local_profile.j2
+        dest: "{{ ansible_env.HOME }}/.local_profile"
+        mode: '0644'
+
+    - name: Deploy disable-pihole.sh script
+      template:
+        src: templates/disable-pihole.sh.j2
+        dest: "{{ ansible_env.HOME }}/Applications/disable-pihole.sh"
+        mode: '0755'
+
+    - name: Deploy neomutt account configurations
+      template:
+        src: "templates/neomutt_accounts/{{ item }}.j2"
+        dest: "{{ ansible_env.HOME }}/.config/neomutt/accounts/{{ item }}"
+        mode: '0644'
+      loop:
+        - gmail
+        - terrablue
+        - uncc
+
+    # Deploy static dotfiles
+    - name: Deploy static dotfiles to home directory
+      copy:
+        src: "files/{{ item }}"
+        dest: "{{ ansible_env.HOME }}/.{{ item }}"
+        mode: '0644'
+      loop:
+        - ansible.cfg
+        - aspell.en.prepl
+        - aspell.en.pws
+        - gitignore
+        - latexmkrc
+        - mrconfig
+        - mrtrust
+        - sops.yaml
+        - streamdeck_ui.json
+        - tmux.conf
+        - zimrc
+        - zshenv
+        - zshrc
+
+    # Deploy .config directory
+    - name: Deploy .config/watson files
+      copy:
+        src: "files/config/watson/"
+        dest: "{{ ansible_env.HOME }}/.config/watson/"
+        mode: '0644'
+
+    - name: Deploy .config/fontconfig files
+      copy:
+        src: "files/config/fontconfig/"
+        dest: "{{ ansible_env.HOME }}/.config/fontconfig/"
+        mode: '0644'
+
+    - name: Deploy .config/neomutt files (excluding accounts)
+      copy:
+        src: "files/config/neomutt/{{ item }}"
+        dest: "{{ ansible_env.HOME }}/.config/neomutt/{{ item }}"
+        mode: '0644'
+      loop:
+        - colors
+        - mailcap
+        - mappings
+        - neomuttrc
+        - settings
+
+    - name: Create empty .keep files for neomutt directories
+      file:
+        path: "{{ ansible_env.HOME }}/.config/neomutt/{{ item }}"
+        state: touch
+        mode: '0644'
+      loop:
+        - gmail/cache/.keep
+        - gmail/certificates/.keep
+        - gmail/headers/.keep
+        - terrablue/cache/.keep
+        - terrablue/certificates/.keep
+        - terrablue/headers/.keep
+        - uncc/cache/.keep
+        - uncc/certificates/.keep
+        - uncc/headers/.keep
+
+    - name: Deploy .config/mr files
+      copy:
+        src: "files/config/mr/"
+        dest: "{{ ansible_env.HOME }}/.config/mr/"
+        mode: '0644'
+
+    - name: Deploy .config/zsh-completions symlink
+      file:
+        src: "{{ ansible_env.HOME }}/.local/share/zim/modules/completion/external/src/_watson"
+        dest: "{{ ansible_env.HOME }}/.config/zsh-completions/_watson"
+        state: link
+        force: yes
+      ignore_errors: yes
+
+    # Deploy .local directory
+    - name: Deploy fonts to .local/share/fonts
+      copy:
+        src: "files/local/private_share/fonts/"
+        dest: "{{ ansible_env.HOME }}/.local/share/fonts/"
+        mode: '0644'
+
+    # Deploy SSH files
+    - name: Deploy SSH config
+      copy:
+        src: "files/ssh/config"
+        dest: "{{ ansible_env.HOME }}/.ssh/config"
+        mode: '0600'
+
+    - name: Deploy SSH authorized_keys
+      copy:
+        src: "files/ssh/authorized_keys"
+        dest: "{{ ansible_env.HOME }}/.ssh/authorized_keys"
+        mode: '0600'
+
+    - name: Deploy SSH public key
+      copy:
+        src: "files/ssh/id_rsa.pub"
+        dest: "{{ ansible_env.HOME }}/.ssh/id_rsa.pub"
+        mode: '0644'
+
+    # Deploy GnuPG files
+    - name: Ensure .gnupg directory has correct permissions
+      file:
+        path: "{{ ansible_env.HOME }}/.gnupg"
+        state: directory
+        mode: '0700'
+
+    - name: Deploy GnuPG configuration files
+      copy:
+        src: "files/gnupg/{{ item }}"
+        dest: "{{ ansible_env.HOME }}/.gnupg/{{ item }}"
+        mode: '0600'
+      loop:
+        - gpg.conf
+        - gpg-agent.conf
+
+    # Deploy Application scripts
+    - name: Deploy application scripts
+      copy:
+        src: "files/Applications/{{ item }}"
+        dest: "{{ ansible_env.HOME }}/Applications/{{ item }}"
+        mode: '0755'
+      loop:
+        - executable_newproj
+        - executable_incus-vm-iso.sh
+
+    # Deploy Media files
+    - name: Deploy Music files
+      copy:
+        src: "files/Music/"
+        dest: "{{ ansible_env.HOME }}/Music/"
+        mode: '0644'
+
+    - name: Deploy Pictures
+      copy:
+        src: "files/Pictures/"
+        dest: "{{ ansible_env.HOME }}/Pictures/"
+        mode: '0644'
+
+    - name: Refresh font cache
+      command: fc-cache -fv
+      changed_when: false
+      ignore_errors: yes
