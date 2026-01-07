@@ -56,6 +56,12 @@
         dest: "{{ ansible_env.HOME }}/.ansible.cfg"
         mode: '0644'
 
+    - name: Deploy streamdeck_ui.json from template
+      template:
+        src: templates/streamdeck_ui.json.j2
+        dest: "{{ ansible_env.HOME }}/.streamdeck_ui.json"
+        mode: '0644'
+
     - name: Deploy disable-pihole.sh script
       template:
         src: templates/disable-pihole.sh.j2
@@ -86,7 +92,6 @@
         - mrconfig
         - mrtrust
         - sops.yaml
-        - streamdeck_ui.json
         - tmux.conf
         - zimrc
         - zshenv
@@ -118,10 +123,11 @@
         - settings
 
     - name: Create empty .keep files for neomutt directories
-      file:
-        path: "{{ ansible_env.HOME }}/.config/neomutt/{{ item }}"
-        state: touch
+      copy:
+        content: ""
+        dest: "{{ ansible_env.HOME }}/.config/neomutt/{{ item }}"
         mode: '0644'
+        force: no
       loop:
         - gmail/cache/.keep
         - gmail/certificates/.keep
