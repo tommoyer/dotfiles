@@ -38,6 +38,27 @@ sudo dnf install ansible
 
 ## Quick Start
 
+### Option 1: Using the Deploy Script (Recommended)
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/tommoyer/dotfiles.git
+   cd dotfiles
+   ```
+
+2. Run the deployment script:
+   ```bash
+   ./deploy.sh
+   ```
+
+   The script will:
+   - Check if Ansible is installed
+   - Create a secrets file from the example if needed
+   - Optionally encrypt the secrets file with Ansible Vault
+   - Run the playbook to deploy your dotfiles
+
+### Option 2: Manual Deployment
+
 1. Clone this repository:
    ```bash
    git clone https://github.com/tommoyer/dotfiles.git
@@ -46,16 +67,11 @@ sudo dnf install ansible
 
 2. Copy and edit the secrets file with your actual values:
    ```bash
-   cp vars/secrets.yml vars/secrets.yml.local
+   cp vars/secrets.yml.example vars/secrets.yml.local
    # Edit vars/secrets.yml.local with your actual credentials
    ```
 
 3. Run the playbook:
-   ```bash
-   ansible-playbook playbook.yml
-   ```
-
-   Or use the local secrets file:
    ```bash
    ansible-playbook playbook.yml -e @vars/secrets.yml.local
    ```
@@ -197,6 +213,8 @@ This repository was previously managed using chezmoi. The conversion involved:
 - Converting chezmoi templates (`.tmpl` with bitwarden integration) to Jinja2 templates (`.j2`)
 - Organizing files into Ansible-standard structure (`files/`, `templates/`, `vars/`)
 - Replacing bitwarden secret lookups with Ansible variables
+
+**Note:** The original chezmoi files (`dot_*`, `private_dot_*`, etc.) are still present in the repository root for reference. Once you've verified the Ansible playbook works correctly, you may optionally remove them. See [MIGRATION.md](MIGRATION.md) for detailed migration information.
 
 ## Troubleshooting
 
